@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Histoire - Église La Grâce de la Croix</title>
+    <link rel="icon" type="image/x-icon" href="/eglise/images/Logo-egise-la-grace-de-la-croix.png">
+    <!-- FancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <!-- Inclure les polices et icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Animate.css pour animations supplémentaires -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Inclure le CSS principal -->
+    <link rel="stylesheet" href="/eglise/src/css/header-footer.css">
+    <link rel="stylesheet" href="/eglise/src/css/styles.css">
+    <style>
+        :root {
+            --primary: #003580;
+            --primary-dark: #00224F;
+            --primary-light: #0071C2;
+            --secondary: #0071c2;
+            --accent: #FC3C5C;
+            --success: #009959;
+            --warning: #FFB700;
+            --danger: #E3001B;
+            --dark: #1A1A1A;
+            --light: #F5F5F5;
+            --gray: #6B6B6B;
+            --gray-light: #EBEBEB;
+            --border-radius: 8px;
+            --border-radius-lg: 16px;
+            --box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+            --box-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }/* History Hero Section avec effet de flou visible */
+.history-hero {
+    padding: 180px 0 100px;
+    background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+        url('/eglise/images/actualites/pexels-august-de-richelieu-4262010.jpg') center/cover fixed;
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+/* Effet de flou EN PLUS du gradient */
+.history-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Couche semi-transparente pour que le flou soit visible */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+/* Assurez-vous que les éléments flottants soient au-dessus du flou */
+.history-hero .floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Container doit être au-dessus du flou */
+.history-hero .container {
+    max-width: 800px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Styles du titre */
+.history-hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Styles du paragraphe */
+.history-hero p {
+    font-size: 18px;
+    opacity: 0.95;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+/* Fil d'Ariane */
+.history-hero .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.history-hero .breadcrumb a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.history-hero .breadcrumb a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.history-hero .breadcrumb span {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.history-hero .breadcrumb i.fa-chevron-right {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Version alternative si l'image ne charge pas */
+.history-hero {
+    background-color: #1a237e; /* Fond bleu foncé par défaut */
+}
+
+/* Pour les éléments flottants (ajustez selon vos besoins) */
+.floating-element {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 15s infinite ease-in-out;
+}
+
+.floating-element:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 5s;
+}
+
+.floating-element:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .section-title.visible h2 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 30px auto 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+        }
+        
+        .section-title.visible p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Introduction Section */
+        .intro-section {
+            background: white;
+        }
+        
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            border-left: 5px solid var(--secondary);
+            background: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .intro-content::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 113, 194, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .intro-content p {
+            position: relative;
+            z-index: 1;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .intro-content.visible p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .intro-content.visible p:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+        
+        .intro-content.visible p:nth-child(2) {
+            transition-delay: 0.3s;
+        }
+        
+        /* Timeline Styles - Improved Design */
+        .timeline-section {
+            background: var(--light);
+            position: relative;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 80px;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .timeline-item:nth-child(even) {
+            transform: translateX(50px);
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: calc(50% + 40px);
+            text-align: left;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: calc(50% + 40px);
+            text-align: right;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            z-index: 1;
+            box-shadow: var(--box-shadow);
+            border: 3px solid white;
+            transition: var(--transition);
+        }
+        
+        .timeline-item:hover .timeline-year {
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 113, 194, 0.4);
+        }
+        
+        .timeline-year::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            background: var(--secondary);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--secondary);
+            transform: translateY(-50%);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(0, 113, 194, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(0, 113, 194, 0);
+            }
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year::before {
+            right: -50px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-year::before {
+            left: -50px;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 35px;
+            box-shadow: var(--box-shadow-lg);
+            position: relative;
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 5px solid var(--accent);
+        }
+        
+        .timeline-content h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .timeline-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: width 0.5s ease;
+        }
+        
+        .timeline-item:hover .timeline-content h3::after {
+            width: 100%;
+        }
+        
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .timeline-item:hover .timeline-icon {
+            transform: rotate(360deg) scale(1.1);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: auto;
+            right: 30px;
+            background: var(--accent);
+        }
+        
+        /* Founder Section */
+        .founder-section {
+            background: white;
+            overflow: hidden;
+        }
+        
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .founder-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-lg);
+            height: 500px;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            background: linear-gradient(to bottom, transparent, rgba(10, 76, 140, 0.3));
+            
+        }
+        
+        .founder-grid.visible .founder-image {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .founder-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            z-index: 1;
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+        
+        .founder-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .founder-content {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+        }
+        
+        .founder-grid.visible .founder-content {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .founder-content h3 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .founder-role {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 25px;
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(0, 113, 194, 0.1);
+            border-radius: 30px;
+            border: 2px solid rgba(0, 113, 194, 0.2);
+            transition: var(--transition);
+        }
+        
+        .founder-role:hover {
+            background: rgba(0, 113, 194, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .founder-quote {
+            font-style: italic;
+            color: var(--primary);
+            border-left: 4px solid var(--secondary);
+            padding-left: 25px;
+            margin: 35px 0;
+            font-size: 20px;
+            line-height: 1.7;
+            font-weight: 500;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
+        }
+        
+        .founder-grid.visible .founder-quote {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .founder-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 60px;
+            color: var(--secondary);
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .founder-content p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .founder-grid.visible .founder-content p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .founder-grid.visible .founder-content p:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        
+        .founder-grid.visible .founder-content p:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+        
+        .founder-grid.visible .founder-content p:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+        
+        /* Values Section */
+        .values-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .values-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: backgroundMove 30s linear infinite;
+        }
+        
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 60px 60px;
+            }
+        }
+        
+        .values-section .section-title h2 {
+            color: white;
+        }
+        
+        .values-section .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .value-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .value-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 25px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .value-card:hover .value-icon::before {
+            transform: translateX(100%);
+        }
+        
+        .value-card:hover .value-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: white;
+            color: var(--secondary);
+        }
+        
+        .value-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .value-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--light);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            height: 280px;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .gallery-item.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(10, 76, 140, 0.9));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay i {
+            font-size: 35px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.1s;
+        }
+        
+        .gallery-item:hover .gallery-overlay i {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay p {
+            font-weight: 600;
+            font-size: 16px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.2s;
+        }
+        
+        .gallery-item:hover .gallery-overlay p {
+            transform: translateY(0);
+        }
+        
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(10, 76, 140, 0.9), rgba(10, 76, 140, 0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .cta-section .container {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+        
+        .cta-buttons .btn {
+            padding: 15px 35px;
+            font-size: 16px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            z-index: 1;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .cta-buttons .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+        
+        .cta-buttons .btn:hover::before {
+            left: 100%;
+        }
+        
+        .cta-buttons .btn-primary {
+            background: var(--secondary);
+            border: 2px solid var(--secondary);
+            color: white;
+        }
+        
+        .cta-buttons .btn-primary:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 113, 194, 0.4);
+        }
+        
+        .cta-buttons .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-buttons .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Keyframe Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .timeline::before {
+                left: 40px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 80px;
+                margin-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-year {
+                left: 40px;
+                transform: translateX(0);
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-year::before {
+                right: auto;
+                left: -45px;
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .history-hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .founder-grid {
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .history-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .history-hero h1 {
+                font-size: 36px;
+            }
+            
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .founder-image {
+                height: 400px;
+            }
+            
+            .founder-image,
+            .founder-content {
+                transform: translateY(30px);
+            }
+            
+            .founder-grid.visible .founder-image,
+            .founder-grid.visible .founder-content {
+                transform: translateY(0);
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .history-hero h1 {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .timeline-content {
+                padding: 25px;
+            }
+            
+            .value-card {
+                padding: 30px 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="history-hero">
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+    <div class="container">
+        <h1>Notre Histoire</h1>
+        <p>Près de quatre décennies de grâce, de croissance et d'impact communautaire</p>
+        <div class="breadcrumb">
+            <a href="/eglise/index.html"><i class="fas fa-home"></i> Accueil</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Notre Histoire</span>
+        </div>
+    </div>
+</section>
+
+    <!-- Introduction Section -->
+    <section class="section intro-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Une Histoire de Foi et de Persévérance</h2>
+                <p>De modestes débuts à une communauté florissante</p>
+            </div>
+            
+            <div class="intro-content">
+                <p>
+                    L'Église La Grâce de la Croix a été fondée en 1985 par le Pasteur David Nzeyimana, avec une petite 
+                    communauté de 12 fidèles. Notre histoire est marquée par la foi, la persévérance et la grâce de Dieu 
+                    qui nous a conduits à travers les saisons de croissance et de défis.
+                </p>
+                <p>
+                    Aujourd'hui, nous sommes une communauté vibrante de plus de 1,250 membres, engagée à servir Dieu 
+                    et notre prochain au Burundi. Notre parcours témoigne de la fidélité de Dieu et de la puissance 
+                    transformatrice de l'Évangile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Parcours</h2>
+                <p>Les moments clés qui ont façonné notre histoire</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- 1985 - Fondation -->
+                <div class="timeline-item">
+                    <div class="timeline-year">1985</div>
+                    <div class="timeline-icon"><i class="fas fa-church"></i></div>
+                    <div class="timeline-content">
+                        <h3>Fondation de l'Église</h3>
+                        <p>Le 15 juin 1985, le Pasteur David Nzeyimana rassemble 12 fidèles dans sa maison pour le premier culte. Notre église naît avec la vision de partager l'amour de Christ dans la communauté de Ngagara.</p>
+                    </div>
+                </div>
+                
+                <!-- 1990 - Premier bâtiment -->
+                <div class="timeline-item">
+                    <div class="timeline-year">1990</div>
+                    <div class="timeline-icon"><i class="fas fa-building"></i></div>
+                    <div class="timeline-content">
+                        <h3>Premier Bâtiment Dédié</h3>
+                        <p>Après 5 années de croissance, nous acquérons notre premier bâtiment officiel. La communauté compte désormais 150 membres réguliers et commence plusieurs ministères.</p>
+                    </div>
+                </div>
+                
+                <!-- 1995 - École du Dimanche -->
+                <div class="timeline-item">
+                    <div class="timeline-year">1995</div>
+                    <div class="timeline-icon"><i class="fas fa-child"></i></div>
+                    <div class="timeline-content">
+                        <h3>Lancement de l'École du Dimanche</h3>
+                        <p>Nous lançons officiellement notre École du Dimanche avec 35 enfants. Ce ministère devient rapidement l'un des plus dynamiques de notre église.</p>
+                    </div>
+                </div>
+                
+                <!-- 2000 - Nouveau Sanctuaire -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-icon"><i class="fas fa-hard-hat"></i></div>
+                    <div class="timeline-content">
+                        <h3>Construction du Nouveau Sanctuaire</h3>
+                        <p>Pour répondre à la croissance de notre communauté, nous construisons un nouveau sanctuaire pouvant accueillir 500 personnes. C'est un moment de grande célébration.</p>
+                    </div>
+                </div>
+                
+                <!-- 2005 - Ministère Social -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <div class="timeline-icon"><i class="fas fa-hands-helping"></i></div>
+                    <div class="timeline-content">
+                        <h3>Élargissement du Ministère Social</h3>
+                        <p>Nous établissons officiellement notre ministère d'action sociale avec des programmes de distribution alimentaire, soutien scolaire et visites aux personnes isolées.</p>
+                    </div>
+                </div>
+                
+                <!-- 2015 - 30ème Anniversaire -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <div class="timeline-content">
+                        <h3>30ème Anniversaire</h3>
+                        <p>Nous célébrons 30 ans de ministère avec plus de 800 membres. Nous lançons plusieurs nouveaux ministères dont le groupe de jeunes et le ministère de prière 24/7.</p>
+                    </div>
+                </div>
+                
+                <!-- 2020 - Adaptation Numérique -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-icon"><i class="fas fa-laptop"></i></div>
+                    <div class="timeline-content">
+                        <h3>Transition vers le Numérique</h3>
+                        <p>Face aux défis mondiaux, nous adoptons la technologie pour diffuser nos cultes en ligne, touchant une audience bien au-delà de Bujumbura.</p>
+                    </div>
+                </div>
+                
+                <!-- 2025 - Présent -->
+                <div class="timeline-item">
+                    <div class="timeline-year">Aujourd'hui</div>
+                    <div class="timeline-icon"><i class="fas fa-users"></i></div>
+                    <div class="timeline-content">
+                        <h3>Une Communauté Florissante</h3>
+                        <p>Avec plus de 1,250 membres actifs, 15 ministères spécialisés et 52 groupes de maison, nous continuons à grandir et à servir notre communauté avec passion et dévouement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fondateur Section -->
+    <section class="section founder-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Fondateur</h2>
+                <p>L'homme derrière la vision qui a transformé une communauté</p>
+            </div>
+            
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <img src="/eglise/images/pasteur/pasteur.jpg" alt="Pasteur David Nzeyimana">
+                </div>
+                <div class="founder-content">
+                    <h3>Pasteur David Nzeyimana</h3>
+                    <div class="founder-role">Fondateur & Pasteur Principal (1985-2015)</div>
+                    <p>
+                        Né en 1950 à Bujumbura, le Pasteur David a reçu l'appel de Dieu en 1980 après une expérience 
+                        personnelle de transformation. Son ministère a débuté avec des études bibliques dans son salon, 
+                        attirant des voisins et amis assoiffés de la Parole de Dieu.
+                    </p>
+                    <p>
+                        Avec une passion inébranlable pour l'évangélisation et un amour profond pour les gens, il a 
+                        guidé notre église à travers les décennies avec sagesse et humilité. Son leadership a été 
+                        caractérisé par la prière, l'intégrité et un engagement indéfectible envers les Écritures.
+                    </p>
+                    
+                    <div class="founder-quote">
+                        "Une église n'est pas un bâtiment, mais un peuple. Un peuple appelé à aimer Dieu et à servir 
+                        son prochain avec grâce et vérité."
+                    </div>
+                    
+                    <p>
+                        Après 30 ans de service dévoué, le Pasteur David a passé le flambeau à son fils en 2015. 
+                        Bien qu'il soit maintenant à la retraite, son héritage continue d'inspirer chaque génération 
+                        de notre communauté et son enseignement reste le fondement de notre foi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valeurs Section -->
+    <section class="section values-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Valeurs Fondamentales</h2>
+                <p>Les principes qui guident notre communauté depuis 1985</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <h3>Autorité des Écritures</h3>
+                    <p>Nous croyons en la Bible comme Parole inspirée de Dieu, autorité suprême pour notre foi et notre pratique quotidienne.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3>Prière Communautaire</h3>
+                    <p>La prière est le fondement de tout ce que nous faisons. Nous prions ensemble, pour nos besoins et ceux du monde.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Amour Fraternel</h3>
+                    <p>Nous cultivons des relations authentiques où chacun est accueilli, aimé et soutenu dans son cheminement spirituel.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Service Communautaire</h3>
+                    <p>Nous croyons que la foi se manifeste par l'action. Nous servons notre communauté avec compassion et excellence.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Communauté Multi-générationnelle</h3>
+                    <p>Nous valorisons chaque génération et créons des espaces où chacun peut grandir et servir selon ses dons.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <h3>Grâce Transformative</h3>
+                    <p>Nous proclamons la grâce de Dieu qui transforme les vies, restaure les familles et renouvelle les communautés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mémoires Visuelles</h2>
+                <p>Quelques moments marquants de notre riche histoire</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <a href="/eglise/images/evenements/mariage.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Premier bâtiment en 1990">
+                    <img src="/eglise/images/evenements/mariage.jpg" alt="Premier bâtiment">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Notre premier bâtiment en 1990</p>
+                    </div>
+                </a>
+                
+                <a href="/eglise/images/history/photo2.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Fondateur avec les premiers membres">
+                    <img src="/eglise/images/history/photo2.jpg" alt="Fondateur avec membres">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Fondateur avec les premiers membres</p>
+                    </div>
+                </a>
+                
+                <a href="/eglise/images/history/photo3.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Construction du nouveau sanctuaire en 2000">
+                    <img src="/eglise/images/history/photo3.jpg" alt="Construction sanctuaire">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Construction du sanctuaire (2000)</p>
+                    </div>
+                </a>
+                
+                <a href="/eglise/images/history/photo4.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Premier baptême de masse en 1992">
+                    <img src="/eglise/images/history/photo4.jpg" alt="Premier baptême">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Premier baptême de masse (1992)</p>
+                    </div>
+                </a>
+                
+                <a href="/eglise/images/history/photo5.jpg" class="gallery-item" data-fancybox="gallery" data-caption="30ème anniversaire en 2015">
+                    <img src="/eglise/images/history/photo5.jpg" alt="30ème anniversaire">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Célébration du 30ème anniversaire</p>
+                    </div>
+                </a>
+                
+                <a href="/eglise/images/history/photo6.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Action sociale communautaire">
+                    <img src="/eglise/images/history/photo6.jpg" alt="Action sociale">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Action sociale dans la communauté</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Faites Partie de Notre Histoire</h2>
+            <p>Venez découvrir notre communauté et écrivez avec nous le prochain chapitre de cette belle histoire. 
+            Que vous soyez en recherche spirituelle, nouveau dans la région, ou simplement curieux de nous connaître, 
+            vous êtes le bienvenu parmi nous.</p>
+            
+            <div class="cta-buttons">
+                <a href="/eglise/pages/culte.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt"></i> Voir les horaires
+                </a>
+                <a href="/eglise/pages/contact.html" class="btn btn-outline">
+                    <i class="fas fa-directions"></i> Nous rendre visite
+                </a>
+                <a href="/eglise/pages/temoignages.html" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i> Lire nos témoignages
+                </a>
+            </div>
+            
+            <div style="margin-top: 40px; font-size: 16px; opacity: 0.9;">
+                <p><i class="fas fa-clock"></i> Culte principal : Dimanche à 9h30</p>
+                <p><i class="fas fa-map-marker-alt"></i> Avenue de la Révolution, Ngagara, Bujumbura</p>
+            </div>
+        </div>
+    </section>
+    <!-- le script principal -->
+    <script src="/eglise/src/js/navbar-footer.js" defer></script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize FancyBox
+            Fancybox.bind("[data-fancybox]", {
+                Thumbs: {
+                    autoStart: true,
+                },
+                Toolbar: {
+                    display: {
+                        left: ["infobar"],
+                        middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW", "flipX", "flipY"],
+                        right: ["slideshow", "thumbs", "close"],
+                    },
+                },
+                animated: true,
+                showClass: 'fancybox-fadeIn',
+                hideClass: 'fancybox-fadeOut',
+            });
+            
+            // Scroll animations with improved detection
+            function animateOnScroll() {
+                const sections = document.querySelectorAll('.section-title, .intro-content, .timeline-item, .value-card, .gallery-item, .founder-grid');
+                const windowHeight = window.innerHeight;
+                const scrollY = window.scrollY;
+                
+                sections.forEach(section => {
+                    const elementTop = section.getBoundingClientRect().top + scrollY;
+                    const elementVisible = 150;
+                    
+                    if (scrollY > elementTop - windowHeight + elementVisible) {
+                        if (!section.classList.contains('visible')) {
+                            if (section.classList.contains('timeline-item')) {
+                                // Staggered animation for timeline items
+                                const delay = Array.from(section.parentNode.children).indexOf(section) * 0.2;
+                                section.style.transitionDelay = delay + 's';
+                            }
+                            
+                            section.classList.add('visible');
+                            
+                            // Add fade-in animation
+                            section.style.animation = 'fadeInUp 0.6s ease forwards';
+                        }
+                    }
+                });
+                
+                // Animate founder grid children separately
+                const founderGrid = document.querySelector('.founder-grid');
+                if (founderGrid && !founderGrid.classList.contains('visible')) {
+                    const founderGridTop = founderGrid.getBoundingClientRect().top + scrollY;
+                    if (scrollY > founderGridTop - windowHeight + 150) {
+                        founderGrid.classList.add('visible');
+                    }
+                }
+                
+                // Animate section titles
+                const sectionTitles = document.querySelectorAll('.section-title');
+                sectionTitles.forEach(title => {
+                    const titleTop = title.getBoundingClientRect().top + scrollY;
+                    if (scrollY > titleTop - windowHeight + 150) {
+                        title.classList.add('visible');
+                    }
+                });
+                
+                // Animate intro content
+                const introContent = document.querySelector('.intro-content');
+                if (introContent && !introContent.classList.contains('visible')) {
+                    const introTop = introContent.getBoundingClientRect().top + scrollY;
+                    if (scrollY > introTop - windowHeight + 150) {
+                        introContent.classList.add('visible');
+                    }
+                }
+            }
+            
+            // Set initial state for animation
+            document.querySelectorAll('.timeline-item, .value-card, .gallery-item').forEach(item => {
+                item.style.opacity = '0';
+            });
+            
+            document.querySelectorAll('.founder-grid, .section-title, .intro-content').forEach(item => {
+                item.style.opacity = '1'; // Reset opacity for parent containers
+            });
+            
+            // Parallax effect for hero section
+            let lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.history-hero');
+                if (hero) {
+                    const speed = 0.5;
+                    hero.style.backgroundPosition = `center ${scrolled * speed}px`;
+                    
+                    // Floating elements animation
+                    const floatingElements = document.querySelectorAll('.floating-element');
+                    floatingElements.forEach((el, index) => {
+                        const speed = 0.1 + (index * 0.05);
+                        el.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+                    });
+                }
+                
+                // Call animation function
+                animateOnScroll();
+                
+                lastScroll = scrolled;
+            });
+            
+            // Initial animation check
+            animateOnScroll();
+            
+            // Button hover effects
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Add smooth scrolling for anchor links (if any)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Add loading animation for images
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                    this.style.transition = 'opacity 0.5s ease';
+                });
+                
+                // Set initial opacity
+                img.style.opacity = '0';
+            });
+            
+            // Add page load animation
+            window.addEventListener('load', function() {
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 100);
+                
+                // Trigger initial animations
+                animateOnScroll();
+            });
+        });
+    </script>
+</body>
+</html>

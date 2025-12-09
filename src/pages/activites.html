@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culte & Activités - Église La Grâce de la Croix</title>
+    <link rel="icon" type="image/x-icon" href="/eglise/images/Logo-egise-la-grace-de-la-croix.png">
+    <!-- Inclure les polices et icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Inclure le CSS principal -->
+    <link rel="stylesheet" href="/eglise/src/css/header-footer.css">
+    <link rel="stylesheet" href="/eglise/src/css/styles.css">
+    
+</head>
+<body>
+    
+
+    <!-- Hero Section pour Activités - Version simplifiée -->
+<section class="activities-hero-simple" 
+         style="background: 
+                linear-gradient(to right, rgba(0, 1, 3, 0.85), rgba(8, 13, 16, 0.75)),
+                url('/eglise/images/evenements/atelier.jpg');
+                background-size: cover;
+                background-position: center;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);">
+    
+    <div class="container" style="position: relative; z-index: 2; text-align: center; padding: 100px 20px;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; margin-bottom: 20px; color: white; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
+            Culte & Activités
+        </h1>
+        
+        <p style="font-size: 20px; opacity: 0.9; line-height: 1.6; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; color: white; text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);">
+            Découvrez nos célébrations, rencontres et moments de partage qui rythment notre vie communautaire
+        </p>
+        
+        <div class="breadcrumb" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; font-size: 16px; padding: 12px 24px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.2);">
+            <a href="/eglise/index.html" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: all 0.3s ease;">Accueil</a>
+            <i class="fas fa-chevron-right" style="font-size: 12px; color: rgba(255, 255, 255, 0.5);"></i>
+            <span style="color: var(--secondary); font-weight: 600;">Culte & Activités</span>
+        </div>
+    </div>
+</section>
+
+<style>
+    .activities-hero-simple {
+        position: relative;
+        min-height: 450px;
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+    }
+    
+    /* Responsive pour la version simplifiée */
+    @media (max-width: 768px) {
+        .activities-hero-simple {
+            min-height: 350px;
+            margin-top: 70px;
+        }
+        
+        .activities-hero-simple h1 {
+            font-size: 36px !important;
+        }
+        
+        .activities-hero-simple p {
+            font-size: 16px !important;
+            padding: 0 20px;
+        }
+    }
+</style>
+
+    <!-- Horaires Section -->
+    <section class="section schedule-section" id="horaires">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Horaires Réguliers</h2>
+                <p>Rejoignez-nous pour célébrer, apprendre et grandir ensemble</p>
+            </div>
+            
+            <div class="schedule-tabs">
+                <button class="schedule-tab active" data-category="all">Toutes les activités</button>
+                <button class="schedule-tab" data-category="worship">Cultes</button>
+                <button class="schedule-tab" data-category="study">Études</button>
+                <button class="schedule-tab" data-category="prayer">Prières</button>
+            </div>
+            
+            <div class="schedule-grid">
+                <!-- Culte Principal -->
+                <div class="schedule-card" data-category="worship">
+                    <div class="schedule-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="schedule-day">Dimanche</div>
+                    <div class="schedule-time">8h00 - 10h00</div>
+                    <div class="schedule-title">Culte Principal</div>
+                    <div class="schedule-description">
+                        Célébration communautaire avec prédication, louange, Sainte-Cène et témoignages. Un moment fort de la semaine pour toute la famille.
+                    </div>
+                    <div class="schedule-location">
+                        <i class="fas fa-map-marker-alt"></i> Sanctuaire Principal
+                    </div>
+                </div>
+                
+                <!-- École du Dimanche -->
+                <div class="schedule-card" data-category="worship">
+                    <div class="schedule-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="schedule-day">Dimanche</div>
+                    <div class="schedule-time">9h00 - 10h30</div>
+                    <div class="schedule-title">École du Dimanche</div>
+                    <div class="schedule-description">
+                        Enseignement biblique adapté pour les enfants (3-12 ans) et adolescents (13-17 ans). Apprentissage ludique et interactif.
+                    </div>
+                    <div class="schedule-location">
+                        <i class="fas fa-map-marker-alt"></i> Bâtiment Éducation
+                    </div>
+                </div>
+                
+                <!-- Étude Biblique -->
+                <div class="schedule-card" data-category="study">
+                    <div class="schedule-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <div class="schedule-day">Mercredi</div>
+                    <div class="schedule-time">18h30 - 20h00</div>
+                    <div class="schedule-title">Étude Biblique</div>
+                    <div class="schedule-description">
+                        Étude approfondie de la Bible en petits groupes. Approfondissement des Écritures et discussion fraternelle.
+                    </div>
+                    <div class="schedule-location">
+                        <i class="fas fa-map-marker-alt"></i> Salles de Classe
+                    </div>
+                </div>
+                
+                <!-- Prière Communautaire -->
+                <div class="schedule-card" data-category="prayer">
+                    <div class="schedule-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <div class="schedule-day">Vendredi</div>
+                    <div class="schedule-time">19h00 - 20h30</div>
+                    <div class="schedule-title">Prières Communautaires</div>
+                    <div class="schedule-description">
+                        Veillée de prière pour les besoins de l'église, de la communauté et du monde. Un moment puissant d'intercession.
+                    </div>
+                    <div class="schedule-location">
+                        <i class="fas fa-map-marker-alt"></i> Salle de Prière
+                    </div>
+                </div>
+                
+                <!-- Groupe de Jeunes -->
+                <div class="schedule-card" data-category="study">
+                    <div class="schedule-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="schedule-day">Samedi</div>
+                    <div class="schedule-time">15h00 - 17h00</div>
+                    <div class="schedule-title">Groupe de Jeunes</div>
+                    <div class="schedule-description">
+                        Rencontre pour les 18-35 ans. Discussions, ateliers et activités sociales adaptées aux jeunes adultes.
+                    </div>
+                    <div class="schedule-location">
+                        <i class="fas fa-map-marker-alt"></i> Salle des Jeunes
+                    </div>
+                </div>
+                
+                <!-- Chorale Gospel -->
+                <div class="schedule-card" data-category="worship">
+                    <div class="schedule-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="schedule-day">Mardi</div>
+                    <div class="schedule-time">17h30 - 19h30</div>
+                    <div class="schedule-title">Répétition Chorale</div>
+                    <div class="schedule-description">
+                        Répétition de la chorale gospel. Ouvert à tous ceux qui aiment chanter et louer Dieu en musique.
+                    </div>
+                    <div class="schedule-location">
+                        <i class="fas fa-map-marker-alt"></i> Salle de Musique
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culte Principal Section -->
+    <section class="section worship-section" id="culte">
+        <div class="container">
+            <div class="section-title">
+                <h2>Le Culte Principal</h2>
+                <p>Un moment de célébration, d'enseignement et de communion fraternelle</p>
+            </div>
+            
+            <div class="worship-grid">
+                <div class="worship-content">
+                    <h3>Venez comme vous êtes</h3>
+                    <p style="color: var(--gray); line-height: 1.7; margin-bottom: 20px;">
+                        Chaque dimanche matin, nous nous rassemblons pour célébrer Dieu ensemble. 
+                        Notre culte est un temps de louange authentique, d'enseignement biblique 
+                        pertinent et de communion fraternelle chaleureuse.
+                    </p>
+                    
+                    <p style="color: var(--gray); line-height: 1.7; margin-bottom: 30px;">
+                        Que vous soyez familier avec l'église ou que ce soit votre première visite, 
+                        vous serez accueilli chaleureusement. Nous croyons que chacun a sa place 
+                        dans la famille de Dieu.
+                    </p>
+                    
+                    <ul class="worship-highlights">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Louange dynamique</strong> avec notre chorale gospel et équipe de louange</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Enseignement biblique</strong> pratique et applicable à la vie quotidienne</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Temps de prière</strong> pour les besoins individuels et communautaires</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Accueil personnalisé</strong> pour les nouveaux visiteurs</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Garde d'enfants</strong> gratuite pendant tout le culte</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">
+                        <i class="fas fa-directions"></i> Planifier votre visite
+                    </a>
+                </div>
+                
+                <div class="worship-image">
+                    <img src="/eglise/images/carousel/chorale-2.jpg" alt="Culte principal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activités Section -->
+    <section class="section" id="activites" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Activités Régulières</h2>
+                <p>Découvrez la richesse de notre vie communautaire au-delà du culte du dimanche</p>
+            </div>
+            
+            <div class="activities-grid">
+                <!-- Études Bibliques -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="/eglise/images/bible-study.jpg" alt="Études bibliques">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Études Bibliques en Groupe</h3>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-calendar"></i> Mercredi 18h30</span>
+                            <span><i class="fas fa-user-friends"></i> Groupes de 8-12</span>
+                        </div>
+                        <div class="activity-description">
+                            Approfondissement des Écritures dans une atmosphère conviviale. Chaque semaine, nous explorons un passage biblique et discutons de son application pratique.
+                        </div>
+                        <div class="activity-age">Adultes & Jeunes</div>
+                    </div>
+                </div>
+                
+                <!-- Groupe de Jeunes -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="/eglise/images/youth-group.jpg" alt="Groupe de jeunes">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Groupe de Jeunes "Génération Foi"</h3>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-calendar"></i> Samedi 15h00</span>
+                            <span><i class="fas fa-user-friends"></i> 18-35 ans</span>
+                        </div>
+                        <div class="activity-description">
+                            Un espace dédié aux jeunes adultes pour grandir dans la foi, développer des amitiés authentiques et servir ensemble.
+                        </div>
+                        <div class="activity-age">18-35 ans</div>
+                    </div>
+                </div>
+                
+                <!-- Ministère Femmes -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="/eglise/images/women-ministry.jpg" alt="Ministère femmes">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Rencontres Femmes "Deborah"</h3>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-calendar"></i> 1er Samedi/mois</span>
+                            <span><i class="fas fa-user-friends"></i> Toutes femmes</span>
+                        </div>
+                        <div class="activity-description">
+                            Rencontres mensuelles d'encouragement, d'enseignement et de partage entre femmes. Un temps précieux pour grandir ensemble.
+                        </div>
+                        <div class="activity-age">Femmes tous âges</div>
+                    </div>
+                </div>
+                
+                <!-- Chorale Gospel -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="/eglise/images/choir.jpg" alt="Chorale gospel">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Chorale Gospel "Voix de Grâce"</h3>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-calendar"></i> Mardi 17h30</span>
+                            <span><i class="fas fa-music"></i> 25 membres</span>
+                        </div>
+                        <div class="activity-description">
+                            Notre chorale anime les cultes et organise des concerts dans la communauté. Aucune expérience musicale préalable requise.
+                        </div>
+                        <div class="activity-age">À partir de 16 ans</div>
+                    </div>
+                </div>
+                
+                <!-- Groupes de Maison -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="/eglise/images/home-group.jpg" alt="Groupes de maison">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Groupes de Maison</h3>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-calendar"></i> En semaine</span>
+                            <span><i class="fas fa-home"></i> 52 groupes</span>
+                        </div>
+                        <div class="activity-description">
+                            Petits groupes qui se réunissent dans les maisons pour prier, étudier la Bible et vivre une communauté authentique.
+                        </div>
+                        <div class="activity-age">Tous âges</div>
+                    </div>
+                </div>
+                
+                <!-- Actions Sociales -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="/eglise/images/social-action.jpg" alt="Actions sociales">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Actions Sociales Communautaires</h3>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-calendar"></i> Variable</span>
+                            <span><i class="fas fa-hands-helping"></i> Bénévoles</span>
+                        </div>
+                        <div class="activity-description">
+                            Distribution alimentaire, visites aux personnes isolées, soutien scolaire. Des actions concrètes pour aimer notre prochain.
+                        </div>
+                        <div class="activity-age">Tous volontaires</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sainte-Cène Section -->
+    <section class="section communion-section" id="sainte-cene">
+        <div class="container">
+            <div class="section-title">
+                <h2>La Sainte-Cène</h2>
+                <p>Un moment sacré de communion avec Dieu et entre frères et sœurs</p>
+            </div>
+            
+            <div class="communion-content">
+                <div class="communion-info">
+                    <h3>Participez à ce moment spécial</h3>
+                    <p>
+                        Nous célébrons la Sainte-Cène le premier dimanche de chaque mois pendant notre culte principal. 
+                        Ce sacrement rappelle le sacrifice de Jésus-Christ pour notre salut et notre unité en tant que corps de Christ.
+                    </p>
+                    <p>
+                        Tous les croyants baptisés sont invités à participer. Si vous êtes nouveau dans la foi ou visiteur, 
+                        vous êtes également le bienvenu pour observer et comprendre la signification profonde de ce moment.
+                    </p>
+                </div>
+                
+                <div class="communion-details">
+                    <div class="communion-detail">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Fréquence</h4>
+                        <p>1er dimanche du mois</p>
+                    </div>
+                    
+                    <div class="communion-detail">
+                        <i class="fas fa-clock"></i>
+                        <h4>Pendant le culte</h4>
+                        <p>Intégrée au culte principal</p>
+                    </div>
+                    
+                    <div class="communion-detail">
+                        <i class="fas fa-user-check"></i>
+                        <h4>Participation</h4>
+                        <p>Tous les croyants baptisés</p>
+                    </div>
+                    
+                    <div class="communion-detail">
+                        <i class="fas fa-heart"></i>
+                        <h4>Signification</h4>
+                        <p>Mémorial du sacrifice de Christ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendrier Section -->
+    <section class="section calendar-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Calendrier des Événements</h2>
+                <p>Ne manquez pas nos événements spéciaux et activités ponctuelles</p>
+            </div>
+            
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h3 style="color: var(--primary); margin: 0;">Avril 2025</h3>
+                    <div class="calendar-nav">
+                        <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-day-name">Lun</div>
+                    <div class="calendar-day-name">Mar</div>
+                    <div class="calendar-day-name">Mer</div>
+                    <div class="calendar-day-name">Jeu</div>
+                    <div class="calendar-day-name">Ven</div>
+                    <div class="calendar-day-name">Sam</div>
+                    <div class="calendar-day-name">Dim</div>
+                    
+                    <!-- Days will be populated by JavaScript -->
+                    <div id="calendarDays"></div>
+                </div>
+                
+                <div class="calendar-events">
+                    <h4 style="color: var(--primary); margin-bottom: 20px;">Événements à venir</h4>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="month">Avr</div>
+                            <div class="day">06</div>
+                        </div>
+                        <div class="event-details">
+                            <h4>Célébration de la Sainte-Cène</h4>
+                            <p>Premier dimanche du mois - Culte spécial avec Sainte-Cène</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="month">Avr</div>
+                            <div class="day">12</div>
+                        </div>
+                        <div class="event-details">
+                            <h4>Retraite des Jeunes</h4>
+                            <p>Journée complète de retraite pour les 18-35 ans au Centre Béthanie</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="month">Avr</div>
+                            <div class="day">20</div>
+                        </div>
+                        <div class="event-details">
+                            <h4>Concert Gospel</h4>
+                            <p>Soirée spéciale avec la chorale "Voix de Grâce" - Ouvert à tous</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Rejoignez-nous cette semaine</h2>
+            <p>Que vous soyez en recherche spirituelle ou cherchant une communauté où grandir, nous vous attendons avec joie</p>
+            
+            <div class="cta-buttons">
+                <a href="#horaires" class="btn btn-primary">
+                    <i class="fas fa-clock"></i> Voir tous les horaires
+                </a>
+                <a href="/eglise/pages/contact.html" class="btn btn-outline">
+                    <i class="fas fa-directions"></i> Nous trouver
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-question-circle"></i> Poser une question
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <!-- le script principal -->
+    <script src="/eglise/src/js/navbar-footer.js" defer></script>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside on mobile
+            document.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768 && 
+                    !event.target.closest('#mainNav') && 
+                    !event.target.closest('#menuToggle') &&
+                    mainNav.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                }
+            });
+            
+            // Mobile nav dropdown toggle
+            if (window.innerWidth <= 768) {
+                const navItems = document.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    if (item.querySelector('.nav-dropdown')) {
+                        item.querySelector('a').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            item.classList.toggle('active');
+                        });
+                    }
+                });
+            }
+            
+            // Desktop dropdown hover
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                const dropdown = item.querySelector('.nav-dropdown');
+                if (dropdown) {
+                    item.addEventListener('mouseenter', function() {
+                        if (window.innerWidth > 768) {
+                            dropdown.style.opacity = '1';
+                            dropdown.style.visibility = 'visible';
+                            dropdown.style.transform = 'translateY(0)';
+                        }
+                    });
+                    
+                    item.addEventListener('mouseleave', function() {
+                        if (window.innerWidth > 768) {
+                            dropdown.style.opacity = '0';
+                            dropdown.style.visibility = 'hidden';
+                            dropdown.style.transform = 'translateY(10px)';
+                        }
+                    });
+                }
+            });
+            
+            // Schedule Tabs Filtering
+            const scheduleTabs = document.querySelectorAll('.schedule-tab');
+            const scheduleCards = document.querySelectorAll('.schedule-card');
+            
+            scheduleTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    scheduleTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide cards based on category
+                    scheduleCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            // Trigger animation
+                            card.style.animation = 'none';
+                            setTimeout(() => {
+                                card.style.animation = 'fadeInUp 0.6s ease forwards';
+                            }, 10);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Scroll animations for activity cards
+            function animateOnScroll() {
+                const activityCards = document.querySelectorAll('.activity-card');
+                const screenPosition = window.innerHeight / 1.2;
+                
+                activityCards.forEach((card, index) => {
+                    const position = card.getBoundingClientRect().top;
+                    
+                    if (position < screenPosition) {
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }
+            
+            // Set initial state for animation
+            document.querySelectorAll('.activity-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+            });
+            
+            // Calendar functionality
+            function generateCalendar(year, month) {
+                const calendarDays = document.getElementById('calendarDays');
+                calendarDays.innerHTML = '';
+                
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month + 1, 0);
+                const daysInMonth = lastDay.getDate();
+                const startingDay = firstDay.getDay();
+                
+                // Adjust for Monday as first day
+                const startDay = startingDay === 0 ? 6 : startingDay - 1;
+                
+                // Add empty cells for days before the first day
+                for (let i = 0; i < startDay; i++) {
+                    const emptyDay = document.createElement('div');
+                    emptyDay.className = 'calendar-day empty';
+                    calendarDays.appendChild(emptyDay);
+                }
+                
+                // Add days of the month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'calendar-day';
+                    
+                    // Mark current day
+                    const today = new Date();
+                    if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
+                        dayElement.classList.add('active');
+                    }
+                    
+                    // Mark days with events (example: 6th, 12th, 20th)
+                    if ([6, 12, 20].includes(day)) {
+                        dayElement.classList.add('has-event');
+                    }
+                    
+                    const dayNumber = document.createElement('div');
+                    dayNumber.className = 'day-number';
+                    dayNumber.textContent = day;
+                    
+                    dayElement.appendChild(dayNumber);
+                    
+                    // Add event names for specific days
+                    if (day === 6) {
+                        const eventName = document.createElement('div');
+                        eventName.className = 'event-name';
+                        eventName.textContent = 'Sainte-Cène';
+                        dayElement.appendChild(eventName);
+                    } else if (day === 12) {
+                        const eventName = document.createElement('div');
+                        eventName.className = 'event-name';
+                        eventName.textContent = 'Retraite';
+                        dayElement.appendChild(eventName);
+                    } else if (day === 20) {
+                        const eventName = document.createElement('div');
+                        eventName.className = 'event-name';
+                        eventName.textContent = 'Concert';
+                        dayElement.appendChild(eventName);
+                    }
+                    
+                    calendarDays.appendChild(dayElement);
+                }
+            }
+            
+            // Initialize calendar with current month
+            const currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            let currentMonth = currentDate.getMonth();
+            
+            generateCalendar(currentYear, currentMonth);
+            
+            // Calendar navigation
+            document.getElementById('prevMonth').addEventListener('click', function() {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                updateCalendarHeader();
+                generateCalendar(currentYear, currentMonth);
+            });
+            
+            document.getElementById('nextMonth').addEventListener('click', function() {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                updateCalendarHeader();
+                generateCalendar(currentYear, currentMonth);
+            });
+            
+            function updateCalendarHeader() {
+                const monthNames = [
+                    'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+                    'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+                ];
+                document.querySelector('.calendar-header h3').textContent = `${monthNames[currentMonth]} ${currentYear}`;
+            }
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Newsletter form
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    this.innerHTML = `
+                        <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: var(--border-radius);">
+                            <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 24px; margin-bottom: 10px; display: block;"></i>
+                            <p style="color: white; margin: 0;">Merci pour votre inscription !</p>
+                        </div>
+                    `;
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
+                            menuToggle.classList.remove('active');
+                            mainNav.classList.remove('active');
+                        }
+                    }
+                });
+            });
+            
+            // Initial animation check
+            animateOnScroll();
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.activities-hero');
+                if (hero) {
+                    hero.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

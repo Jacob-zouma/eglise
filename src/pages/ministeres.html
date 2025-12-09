@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Ministères - Église La Grâce de la Croix</title>
+    <link rel="icon" type="image/x-icon" href="/eglise/images/Logo-egise-la-grace-de-la-croix.png">
+    <!-- Inclure les polices et icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Inclure le CSS principal -->
+    <link rel="stylesheet" href="/eglise/src/css/header-footer.css">
+    <link rel="stylesheet" href="/eglise/src/css/styles.css">
+    
+</head>
+<body>
+   
+
+    <!-- Hero Section pour Ministères -->
+    <section class="activities-hero-simple" 
+         style="background: 
+                linear-gradient(to right, rgba(0, 1, 3, 0.85), rgba(8, 13, 16, 0.75)),
+                url('/eglise/images/carousel/culte-2.jpg');
+                background-size: cover;
+                background-position: center;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px); margin-top: 14.5vh;">
+    
+    <div class="container" style="position: relative; z-index: 2; text-align: center; padding: 100px 20px;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; margin-bottom: 20px; color: white; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
+            Nos Ministères
+        </h1>
+        
+        <p style="font-size: 20px; opacity: 0.9; line-height: 1.6; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; color: white; text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);">
+            Découvrez les différents services qui font vivre notre communauté et trouvez votre place pour servir
+        </p>
+        
+        <div class="breadcrumb" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; font-size: 16px; padding: 12px 24px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.2);">
+            <a href="/eglise/index.html" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: all 0.3s ease;">Accueil</a>
+            <i class="fas fa-chevron-right" style="font-size: 12px; color: rgba(255, 255, 255, 0.5);"></i>
+            <span style="color: var(--secondary); font-weight: 600;">Nos Ministères</span>
+        </div>
+    </div>
+</section>
+
+    <!-- Introduction Section -->
+    <section class="section intro-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Servez selon vos dons</h2>
+                <p>Chaque membre a un rôle à jouer dans la croissance de notre communauté</p>
+            </div>
+            
+            <div class="intro-content">
+                <p>
+                    À l'Église La Grâce de la Croix, nous croyons que chaque personne est douée par Dieu pour contribuer 
+                    à l'édification du corps de Christ. Nos différents ministères existent pour permettre à chacun de 
+                    découvrir, développer et exercer ses dons spirituels au service de Dieu et des autres.
+                </p>
+                <p>
+                    Que vous soyez doué pour l'enseignement, la musique, l'accueil, la prière ou le service pratique, 
+                    il y a une place pour vous dans notre communauté.
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Ministères Actifs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label">Bénévoles Engagés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">52</div>
+                    <div class="stat-label">Groupes de Maison</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Jours de Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministères Grid Section -->
+    <section class="section ministries-section" id="ministries">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explorez Nos Ministères</h2>
+                <p>Choisissez une catégorie pour découvrir les opportunités de service</p>
+            </div>
+            
+            <div class="ministries-filter">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-th"></i> Tous
+                </button>
+                <button class="filter-btn" data-category="jeunesse">
+                    <i class="fas fa-users"></i> Jeunesse
+                </button>
+                <button class="filter-btn" data-category="enfants">
+                    <i class="fas fa-child"></i> Enfants
+                </button>
+                <button class="filter-btn" data-category="famille">
+                    <i class="fas fa-home"></i> Famille
+                </button>
+                <button class="filter-btn" data-category="adoration">
+                    <i class="fas fa-music"></i> Adoration
+                </button>
+                <button class="filter-btn" data-category="social">
+                    <i class="fas fa-hands-helping"></i> Social
+                </button>
+            </div>
+            
+            <div class="ministries-grid">
+                <!-- Ministère de Jeunesse -->
+                <div class="ministry-card" data-category="jeunesse">
+                    <div class="ministry-header">
+                        <div class="ministry-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Ministère Jeunesse</h3>
+                        <div class="ministry-category">Jeunesse</div>
+                        <p style="color: var(--gray); font-size: 14px;">Pour les 18-35 ans</p>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-description">
+                            Un espace dynamique où les jeunes adultes peuvent grandir dans leur foi, développer des relations authentiques et s'engager dans le service.
+                        </div>
+                        <div class="ministry-details">
+                            <div class="ministry-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Samedi 15h-17h</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span>85 membres</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Salle des Jeunes</span>
+                            </div>
+                        </div>
+                        <div class="ministry-leader">
+                            <div class="leader-avatar">
+                                <img src="/eglise/images/leaders/jeunesse.jpg" alt="Responsable jeunesse">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Pasteur Jean Nkurunziza</h4>
+                                <p>Responsable du Ministère Jeunesse</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 15px; justify-content: center;">
+                            <i class="fas fa-user-plus"></i> Rejoindre ce ministère
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- École du Dimanche -->
+                <div class="ministry-card" data-category="enfants">
+                    <div class="ministry-header">
+                        <div class="ministry-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>École du Dimanche</h3>
+                        <div class="ministry-category">Enfants</div>
+                        <p style="color: var(--gray); font-size: 14px;">Pour les 3-12 ans</p>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-description">
+                            Enseignement biblique adapté aux enfants avec des méthodes ludiques et créatives pour les aider à découvrir l'amour de Dieu dès leur jeune âge.
+                        </div>
+                        <div class="ministry-details">
+                            <div class="ministry-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Dimanche 9h-10h30</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span>120 enfants</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bâtiment Éducation</span>
+                            </div>
+                        </div>
+                        <div class="ministry-leader">
+                            <div class="leader-avatar">
+                                <img src="/eglise/images/leaders/enfants.jpg" alt="Responsable enfants">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Sarah Manirakiza</h4>
+                                <p>Coordinatrice École du Dimanche</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 15px; justify-content: center;">
+                            <i class="fas fa-user-plus"></i> Rejoindre ce ministère
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Ministère des Femmes -->
+                <div class="ministry-card" data-category="famille">
+                    <div class="ministry-header">
+                        <div class="ministry-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <h3>Ministère des Femmes "Deborah"</h3>
+                        <div class="ministry-category">Famille</div>
+                        <p style="color: var(--gray); font-size: 14px;">Pour toutes les femmes</p>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-description">
+                            Un espace d'encouragement, d'enseignement et de soutien mutuel où les femmes peuvent grandir spirituellement et développer leurs dons.
+                        </div>
+                        <div class="ministry-details">
+                            <div class="ministry-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>1er Samedi/mois</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span>180 membres</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Salle Polyvalente</span>
+                            </div>
+                        </div>
+                        <div class="ministry-leader">
+                            <div class="leader-avatar">
+                                <img src="/eglise/images/leaders/femmes.jpg" alt="Responsable femmes">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Pasteure Marie Ndayishimiye</h4>
+                                <p>Responsable Ministère Femmes</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 15px; justify-content: center;">
+                            <i class="fas fa-user-plus"></i> Rejoindre ce ministère
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Chorale Gospel -->
+                <div class="ministry-card" data-category="adoration">
+                    <div class="ministry-header">
+                        <div class="ministry-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Chorale Gospel "Voix de Grâce"</h3>
+                        <div class="ministry-category">Adoration</div>
+                        <p style="color: var(--gray); font-size: 14px;">Pour tous les amateurs de musique</p>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-description">
+                            Notre chorale anime les cultes et organise des concerts dans la communauté. Aucune expérience musicale préalable requise, seulement un cœur pour louer.
+                        </div>
+                        <div class="ministry-details">
+                            <div class="ministry-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Mardi 17h30-19h30</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span>25 choristes</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Salle de Musique</span>
+                            </div>
+                        </div>
+                        <div class="ministry-leader">
+                            <div class="leader-avatar">
+                                <img src="/eglise/images/leaders/chorale.jpg" alt="Chef de chorale">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Eric Niyongabo</h4>
+                                <p>Chef de Chorale</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 15px; justify-content: center;">
+                            <i class="fas fa-user-plus"></i> Rejoindre ce ministère
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Action Sociale -->
+                <div class="ministry-card" data-category="social">
+                    <div class="ministry-header">
+                        <div class="ministry-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Action Sociale Communautaire</h3>
+                        <div class="ministry-category">Social</div>
+                        <p style="color: var(--gray); font-size: 14px;">Service pratique dans la communauté</p>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-description">
+                            Distribution alimentaire, visites aux personnes isolées, soutien scolaire, projets de développement. Des actions concrètes pour aimer notre prochain.
+                        </div>
+                        <div class="ministry-details">
+                            <div class="ministry-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Variable selon projets</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span>65 bénévoles</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Dans toute la communauté</span>
+                            </div>
+                        </div>
+                        <div class="ministry-leader">
+                            <div class="leader-avatar">
+                                <img src="/eglise/images/leaders/social.jpg" alt="Responsable action sociale">
+                            </div>
+                            <div class="leader-info">
+                                <h4>David Ndayishimiye</h4>
+                                <p>Coordinateur Action Sociale</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 15px; justify-content: center;">
+                            <i class="fas fa-user-plus"></i> Rejoindre ce ministère
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Ministère de Prière -->
+                <div class="ministry-card" data-category="adoration">
+                    <div class="ministry-header">
+                        <div class="ministry-icon">
+                            <i class="fas fa-hands-praying"></i>
+                        </div>
+                        <h3>Ministère de Prière 24/7</h3>
+                        <div class="ministry-category">Adoration</div>
+                        <p style="color: var(--gray); font-size: 14px;">Intercession pour l'église et le monde</p>
+                    </div>
+                    <div class="ministry-content">
+                        <div class="ministry-description">
+                            Groupe dédié à la prière d'intercession pour les besoins de l'église, de la communauté et du monde. Chaîne de prière continue 24h/24.
+                        </div>
+                        <div class="ministry-details">
+                            <div class="ministry-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Vendredi 19h-20h30</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-user-friends"></i>
+                                <span>45 intercesseurs</span>
+                            </div>
+                            <div class="ministry-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Salle de Prière</span>
+                            </div>
+                        </div>
+                        <div class="ministry-leader">
+                            <div class="leader-avatar">
+                                <img src="/eglise/images/leaders/priere.jpg" alt="Responsable prière">
+                            </div>
+                            <div class="leader-info">
+                                <h4>Chantal Niyonkuru</h4>
+                                <p>Coordinatrice Ministère de Prière</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 15px; justify-content: center;">
+                            <i class="fas fa-user-plus"></i> Rejoindre ce ministère
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe de Direction Section -->
+    <section class="section leadership-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Équipe de Direction</h2>
+                <p>Découvrez les leaders qui guident et coordonnent nos différents ministères</p>
+            </div>
+            
+            <div class="leadership-grid">
+                <!-- Pasteur Principal -->
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="/eglise/images/pasteur/pasteur-3.jpg" alt="Pasteur Samuel Nzeyimana">
+                        <div class="leader-overlay">
+                            <h4>Pasteur Samuel Nzeyimana</h4>
+                            <p>Pasteur Principal</p>
+                        </div>
+                    </div>
+                    <div class="leader-content">
+                        <div class="leader-role">Pasteur Principal</div>
+                        <div class="leader-bio">
+                            Fils du fondateur, le Pasteur Samuel a pris la direction de l'église en 2015. Titulaire d'un master en théologie, il apporte une vision innovante tout en préservant les valeurs fondamentales.
+                        </div>
+                        <div class="leader-contact">
+                            <a href="mailto:samuel@egliselagracedelacroix.bi"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:+25779876543"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pasteur Adjoint -->
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="/eglise/images/pasteur/pasteur-1.jpg" alt="Pasteur Jean Nkurunziza">
+                        <div class="leader-overlay">
+                            <h4>Pasteur Jean Nkurunziza</h4>
+                            <p>Pasteur Adjoint</p>
+                        </div>
+                    </div>
+                    <div class="leader-content">
+                        <div class="leader-role">Pasteur Adjoint</div>
+                        <div class="leader-bio">
+                            Spécialiste en counselling familial, le Pasteur Jean dirige les ministères de jeunesse et de famille. Il est marié et père de trois enfants.
+                        </div>
+                        <div class="leader-contact">
+                            <a href="mailto:jean@egliselagracedelacroix.bi"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:+25778345678"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pasteure -->
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="/eglise/images/pasteur/pasteur-4.jpg" alt="Pasteure Marie Ndayishimiye">
+                        <div class="leader-overlay">
+                            <h4>Pasteure Marie Ndayishimiye</h4>
+                            <p>Responsable Ministère Femmes</p>
+                        </div>
+                    </div>
+                    <div class="leader-content">
+                        <div class="leader-role">Responsable Ministère Femmes</div>
+                        <div class="leader-bio">
+                            Diplômée en théologie pratique, la Pasteure Marie dirige le ministère des femmes et les activités sociales. Son cœur bat pour l'autonomisation des femmes.
+                        </div>
+                        <div class="leader-contact">
+                            <a href="mailto:marie@egliselagracedelacroix.bi"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:+25776234567"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bénévolat Section -->
+    <section class="section volunteer-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Devenez Bénévole</h2>
+                <p>Rejoignez notre équipe de bénévoles et découvrez la joie de servir</p>
+            </div>
+            
+            <div class="volunteer-content">
+                <div class="volunteer-info">
+                    <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.7; margin-bottom: 20px;">
+                        Chez nous, chaque main compte ! Que vous ayez une heure par semaine ou plusieurs heures par mois, 
+                        il y a une place pour vous dans notre équipe de bénévoles.
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.7;">
+                        Notre processus d'intégration est simple et vous serez accompagné à chaque étape pour découvrir 
+                        le service qui correspond le mieux à vos dons et disponibilités.
+                    </p>
+                </div>
+                
+                <div class="volunteer-steps">
+                    <div class="volunteer-step">
+                        <div class="step-number">1</div>
+                        <h4>Renseignez-vous</h4>
+                        <p>Explorez nos différents ministères et identifiez ceux qui vous intéressent</p>
+                    </div>
+                    
+                    <div class="volunteer-step">
+                        <div class="step-number">2</div>
+                        <h4>Contactez-nous</h4>
+                        <p>Prenez rendez-vous avec un responsable de ministère pour discuter des opportunités</p>
+                    </div>
+                    
+                    <div class="volunteer-step">
+                        <div class="step-number">3</div>
+                        <h4>Participez à une formation</h4>
+                        <p>Suivez notre formation d'introduction au bénévolat (2 sessions de 2 heures)</p>
+                    </div>
+                    
+                    <div class="volunteer-step">
+                        <div class="step-number">4</div>
+                        <h4>Commencez à servir</h4>
+                        <p>Intégrez une équipe et commencez votre service avec un bénévole expérimenté</p>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn btn-primary" style="margin-top: 40px;">
+                    <i class="fas fa-handshake"></i> Devenir bénévole
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Témoignages de Bénévoles</h2>
+                <p>Découvrez les expériences de ceux qui servent déjà dans nos ministères</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-quote">
+                        Servir dans le ministère des enfants a transformé ma vie. Voir ces petits visages s'illuminer quand ils découvrent une histoire biblique, c'est la plus belle récompense. J'ai trouvé ma famille ici.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/eglise/images/temoins/sarah.jpg.jpg" alt="Sarah">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Manirakiza</h4>
+                            <p>Bénévole à l'École du Dimanche depuis 3 ans</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote">
+                        En tant qu'étudiant, je cherchais un moyen de m'impliquer. Le ministère de jeunesse m'a permis non seulement de servir mais aussi de développer des amitiés profondes. Je grandis spirituellement en aidant les autres à grandir.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/eglise/images/temoins/eric.jpg" alt="Éric">
+                        </div>
+                        <div class="author-info">
+                            <h4>Éric Niyongabo</h4>
+                            <p>Chef de chorale et bénévole jeunesse</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote">
+                        Après ma retraite, je voulais donner du sens à mon temps. L'action sociale m'a permis de mettre mes compétences au service des plus démunis. Chaque visite, chaque sourire reçu me rappelle pourquoi je sers.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/eglise/images/temoins/david.jpg.jpg" alt="David">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Ndayishimiye</h4>
+                            <p>Bénévole action sociale depuis 5 ans</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-slide="0"></div>
+                    <div class="testimonial-dot" data-slide="1"></div>
+                    <div class="testimonial-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Trouvez Votre Place</h2>
+            <p>Chaque talent, chaque passion, chaque disponibilité peut être utilisé pour servir Dieu et bénir les autres</p>
+            
+            <div class="cta-buttons">
+                <a href="#ministries" class="btn btn-primary">
+                    <i class="fas fa-search"></i> Explorer les ministères
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-comments"></i> Discuter avec un responsable
+                </a>
+                <a href="/eglise/pages/activites.html" class="btn btn-outline">
+                    <i class="fas fa-calendar-alt"></i> Voir nos activités
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- le script principal -->
+    <script src="/eglise/src/js/navbar-footer.js" defer></script>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside on mobile
+            document.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768 && 
+                    !event.target.closest('#mainNav') && 
+                    !event.target.closest('#menuToggle') &&
+                    mainNav.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                }
+            });
+            
+            // Mobile nav dropdown toggle
+            if (window.innerWidth <= 768) {
+                const navItems = document.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    if (item.querySelector('.nav-dropdown')) {
+                        item.querySelector('a').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            item.classList.toggle('active');
+                        });
+                    }
+                });
+            }
+            
+            // Desktop dropdown hover
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                const dropdown = item.querySelector('.nav-dropdown');
+                if (dropdown) {
+                    item.addEventListener('mouseenter', function() {
+                        if (window.innerWidth > 768) {
+                            dropdown.style.opacity = '1';
+                            dropdown.style.visibility = 'visible';
+                            dropdown.style.transform = 'translateY(0)';
+                        }
+                    });
+                    
+                    item.addEventListener('mouseleave', function() {
+                        if (window.innerWidth > 768) {
+                            dropdown.style.opacity = '0';
+                            dropdown.style.visibility = 'hidden';
+                            dropdown.style.transform = 'translateY(10px)';
+                        }
+                    });
+                }
+            });
+            
+            // Ministries Filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const ministryCards = document.querySelectorAll('.ministry-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide cards based on category
+                    ministryCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            // Trigger animation
+                            card.classList.add('visible');
+                        } else {
+                            card.style.display = 'none';
+                            card.classList.remove('visible');
+                        }
+                    });
+                });
+            });
+            
+            // Scroll animations for ministry cards
+            function animateOnScroll() {
+                const cards = document.querySelectorAll('.ministry-card');
+                const screenPosition = window.innerHeight / 1.2;
+                
+                cards.forEach((card, index) => {
+                    const position = card.getBoundingClientRect().top;
+                    
+                    if (position < screenPosition && card.style.display !== 'none') {
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }
+            
+            // Set initial state for animation
+            document.querySelectorAll('.ministry-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+            });
+            
+            // Testimonials Slider
+            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+            const testimonialDots = document.querySelectorAll('.testimonial-dot');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                testimonialSlides.forEach(slide => slide.classList.remove('active'));
+                
+                // Remove active class from all dots
+                testimonialDots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show selected slide
+                testimonialSlides[index].classList.add('active');
+                
+                // Activate corresponding dot
+                testimonialDots[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            // Add click events to dots
+            testimonialDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Auto-advance slides
+            function autoAdvanceSlides() {
+                currentSlide = (currentSlide + 1) % testimonialSlides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Start auto-advance
+            let slideInterval = setInterval(autoAdvanceSlides, 5000);
+            
+            // Pause auto-advance on hover
+            const slider = document.querySelector('.testimonials-slider');
+            if (slider) {
+                slider.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
+                
+                slider.addEventListener('mouseleave', () => {
+                    slideInterval = setInterval(autoAdvanceSlides, 5000);
+                });
+            }
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Newsletter form
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    this.innerHTML = `
+                        <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: var(--border-radius);">
+                            <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 24px; margin-bottom: 10px; display: block;"></i>
+                            <p style="color: white; margin: 0;">Merci pour votre inscription !</p>
+                        </div>
+                    `;
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
+                            menuToggle.classList.remove('active');
+                            mainNav.classList.remove('active');
+                        }
+                    }
+                });
+            });
+            
+            // Initial animation check
+            animateOnScroll();
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.ministries-hero');
+                if (hero) {
+                    hero.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
