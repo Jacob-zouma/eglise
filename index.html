@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Église Saint-Jacques - Église Protestante au Burundi</title>
+    <title>Ã‰glise Saint-Jacques - Ã‰glise Protestante au Burundi</title>
     <link rel="icon" type="image/png" href="images/Logo-egise-la-grace-de-la-croix.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
@@ -17,10 +17,1665 @@
     <!-- l'icone du site dans le navigateur -->
      <link rel="shortcut icon" href="images/Logo-egise-la-grace-de-la-croix.png" type="image/x-icon">
     <!-- Le css global -->
- 
+    
+    <style>
+        /* header-footer.css - Styles communs pour header et footer */
 
+/* Header Styles */
+header {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 13px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--secondary);
+}
 
-    <link rel="stylesheet" href="src/css/styles.css">
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Navigation */
+nav {
+    margin: 0 30px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition);
+    position: relative;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--secondary);
+    transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 10px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown a {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-dropdown a:hover {
+    color: var(--primary);
+    background-color: var(--gray-light);
+}
+
+/* Header actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 0px 14px;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.dropdown-toggle:hover {
+    background: var(--gray-light);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: var(--dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    color: var(--primary);
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+    border: none;
+}
+.btn-primary2 {
+    background: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    backdrop-filter: blur(4px);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark);
+    border-radius: 3px;
+    transition: var(--transition);
+    transform-origin: left;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        margin: 0;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--gray-light);
+        width: 100%;
+    }
+    
+    .nav-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-left: 20px;
+        display: none;
+    }
+    
+    .nav-item.active .nav-dropdown {
+        display: block;
+    }
+    
+    .header-actions .btn {
+        display: none;
+    }
+    
+    .header-actions .dropdown:last-child {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-actions .btn {
+        display: none;
+    }
+    
+    .logo-icon img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact {
+            list-style: none;
+        }
+        
+        .footer-contact li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* newsletter */
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .newsletter-form input {
+            padding: 14px 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .newsletter-form button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .newsletter-form button:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .footer-bottom {
+            padding: 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        
+        .footer-bottom a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(10, 76, 140, 0.9), rgba(10, 76, 140, 0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .cta-section .container {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+        
+        .cta-buttons .btn {
+            padding: 15px 35px;
+            font-size: 16px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            z-index: 1;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .cta-buttons .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+        
+        .cta-buttons .btn:hover::before {
+            left: 100%;
+        }
+        
+        .cta-buttons .btn-primary {
+            background: var(--secondary);
+            border: 2px solid var(--secondary);
+            color: white;
+        }
+        
+        .cta-buttons .btn-primary:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 113, 194, 0.4);
+        }
+        
+        .cta-buttons .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-buttons .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Keyframe Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .timeline::before {
+                left: 40px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 80px;
+                margin-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-year {
+                left: 40px;
+                transform: translateX(0);
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-year::before {
+                right: auto;
+                left: -45px;
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .history-hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .founder-grid {
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .history-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .history-hero h1 {
+                font-size: 36px;
+            }
+            
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .founder-image {
+                height: 400px;
+            }
+            
+            .founder-image,
+            .founder-content {
+                transform: translateY(30px);
+            }
+            
+            .founder-grid.visible .founder-image,
+            .founder-grid.visible .founder-content {
+                transform: translateY(0);
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .history-hero h1 {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .timeline-content {
+                padding: 25px;
+            }
+            
+            .value-card {
+                padding: 30px 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+/* preloader.css */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,  0%, #00224F 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.preloader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+body.preloader-active {
+    overflow: hidden;
+}
+
+.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+}
+    </style>
+<style>
+/* ============ VARIABLES CSS MANQUANTES ============ */
+:root {
+    --primary: #0071c2;
+    --primary-light: #3399ff;
+    --primary-dark: #00224F;
+    --secondary: #8B4513;
+    --secondary-light: #A0522D;
+    --dark: #333333;
+    --gray-light: #f8f9fa;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ============ STYLES DE BASE ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 86px; /* Pour header fixe */
+}
+
+        /* header-footer.css - Styles communs pour header et footer */
+
+/* Header Styles */
+header {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 13px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--secondary);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Navigation */
+nav {
+    margin: 0 30px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition);
+    position: relative;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--secondary);
+    transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 10px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown a {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-dropdown a:hover {
+    color: var(--primary);
+    background-color: var(--gray-light);
+}
+
+/* Header actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 0px 14px;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.dropdown-toggle:hover {
+    background: var(--gray-light);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: var(--dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    color: var(--primary);
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+    border: none;
+}
+.btn-primary2 {
+    background: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    backdrop-filter: blur(4px);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark);
+    border-radius: 3px;
+    transition: var(--transition);
+    transform-origin: left;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        margin: 0;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--gray-light);
+        width: 100%;
+    }
+    
+    .nav-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-left: 20px;
+        display: none;
+    }
+    
+    .nav-item.active .nav-dropdown {
+        display: block;
+    }
+    
+    .header-actions .btn {
+        display: none;
+    }
+    
+    .header-actions .dropdown:last-child {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-actions .btn {
+        display: none;
+    }
+    
+    .logo-icon img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact {
+            list-style: none;
+        }
+        
+        .footer-contact li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* newsletter */
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .newsletter-form input {
+            padding: 14px 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .newsletter-form button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .newsletter-form button:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .footer-bottom {
+            padding: 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        
+        .footer-bottom a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(10, 76, 140, 0.9), rgba(10, 76, 140, 0.95)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .cta-section .container {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+        
+        .cta-buttons .btn {
+            padding: 15px 35px;
+            font-size: 16px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            z-index: 1;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .cta-buttons .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+        
+        .cta-buttons .btn:hover::before {
+            left: 100%;
+        }
+        
+        .cta-buttons .btn-primary {
+            background: var(--secondary);
+            border: 2px solid var(--secondary);
+            color: white;
+        }
+        
+        .cta-buttons .btn-primary:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 113, 194, 0.4);
+        }
+        
+        .cta-buttons .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-buttons .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Keyframe Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .timeline::before {
+                left: 40px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 80px;
+                margin-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-year {
+                left: 40px;
+                transform: translateX(0);
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-year::before {
+                right: auto;
+                left: -45px;
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .history-hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .founder-grid {
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .history-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .history-hero h1 {
+                font-size: 36px;
+            }
+            
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .founder-image {
+                height: 400px;
+            }
+            
+            .founder-image,
+            .founder-content {
+                transform: translateY(30px);
+            }
+            
+            .founder-grid.visible .founder-image,
+            .founder-grid.visible .founder-content {
+                transform: translateY(0);
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .history-hero h1 {
+                font-size: 32px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .timeline-content {
+                padding: 25px;
+            }
+            
+            .value-card {
+                padding: 30px 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+/* preloader.css */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,  0%, #00224F 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.preloader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+body.preloader-active {
+    overflow: hidden;
+}
+
+.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+}
+    </style>
 </head>
 <body>
     
@@ -33,7 +1688,7 @@
                     <img src="images/Logo-egise-la-grace-de-la-croix.png" alt="La grace de la croix" style="background-position: center;background-size: cover;width: 11rem;height: 11rem;border-radius: 100%;">
                     <!-- <i class="fas fa-church"></i> -->
                 </div>
-                <!-- <div class="logo-text">Église <span>Saint-Jacques</span></div> -->
+                <!-- <div class="logo-text">Ã‰glise <span>Saint-Jacques</span></div> -->
             </a>
             
             <button class="menu-toggle" id="menuToggle">
@@ -48,7 +1703,7 @@
                         <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#"><i class="fas fa-church"></i> L'Église <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
+                        <a href="#"><i class="fas fa-church"></i> L'Ã‰glise <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
                         <div class="nav-dropdown">
                             <a href="src/pages/histoire2.html"><i class="fas fa-history"></i> Notre Histoire</a>
                             <a href="src/pages/histoire2.html"><i class="fas fa-users"></i> Nos Pasteurs</a>
@@ -57,18 +1712,18 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#"><i class="fas fa-calendar-alt"></i> Activités <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
+                        <a href="#"><i class="fas fa-calendar-alt"></i> ActivitÃ©s <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
                         <div class="nav-dropdown">
                             <a href="src/pages/activites.html"><i class="fas fa-pray"></i> Cultes du Dimanche</a>
-                            <a href="src/pages/activites.html"><i class="fas fa-users"></i> Groupes de Prière</a>
-                            <a href="src/pages/activites.html"><i class="fas fa-child"></i> École du Dimanche</a>
+                            <a href="src/pages/activites.html"><i class="fas fa-users"></i> Groupes de PriÃ¨re</a>
+                            <a href="src/pages/activites.html"><i class="fas fa-child"></i> Ã‰cole du Dimanche</a>
                             <a href="src/pages/activites.html"><i class="fas fa-music"></i> Chorale</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#"><i class="fas fa-hands-helping"></i> Ministères <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
+                        <a href="#"><i class="fas fa-hands-helping"></i> MinistÃ¨res <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
                         <div class="nav-dropdown">
-                            <a href="src/pages/ministeres.html"><i class="fas fa-hands-praying"></i> Prière</a>
+                            <a href="src/pages/ministeres.html"><i class="fas fa-hands-praying"></i> PriÃ¨re</a>
                             <a href="src/pages/ministeres.html"><i class="fas fa-music"></i> Louange</a>
                             <a href="src/pages/ministeres.html"><i class="fas fa-child"></i> Jeunesse</a>
                             <a href="src/pages/ministeres.html"><i class="fas fa-hands"></i> Diaconat</a>
@@ -95,7 +1750,7 @@
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item"><i class="fas fa-user"></i> Mon Compte</a>
                         <a href="#" class="dropdown-item"><i class="fas fa-envelope"></i> Messages</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-calendar"></i> Mes Événements</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-calendar"></i> Mes Ã‰vÃ©nements</a>
                         <hr>
                         <a href="#" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Connexion</a>
                     </div>
@@ -105,24 +1760,24 @@
     </header>
 
   <!-- Hero Section -->
-<section class="hero animate-on-scroll" aria-label="Hero - Église la grâce de la croix lumineuse">
+<section class="hero animate-on-scroll" aria-label="Hero - Ã‰glise la grÃ¢ce de la croix lumineuse">
 
-    <!-- SLIDESHOW 4 IMAGES (éléments vides gérés en CSS) -->
+    <!-- SLIDESHOW 4 IMAGES (Ã©lÃ©ments vides gÃ©rÃ©s en CSS) -->
     <div class="slide slide-1" aria-hidden="true"></div>
     <div class="slide slide-2" aria-hidden="true"></div>
     <div class="slide slide-3" aria-hidden="true"></div>
     <div class="slide slide-4" aria-hidden="true"></div>
 
-    <!-- Dégradé + flou -->
+    <!-- DÃ©gradÃ© + flou -->
     <div class="hero-overlay" aria-hidden="true"></div>
 
-    <!-- Contenu centré -->
+    <!-- Contenu centrÃ© -->
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">Église La grâce de la croix<span> lumineuse</span></h1>
+            <h1 class="hero-title">Ã‰glise La grÃ¢ce de la croix<span> lumineuse</span></h1>
             <p class="hero-subtitle">
-                Une communauté chrétienne vivante qui célèbre Dieu, sert son prochain et proclame 
-                l'Évangile de Jésus-Christ. Rejoignez-nous pour vivre une expérience spirituelle authentique.
+                Une communautÃ© chrÃ©tienne vivante qui cÃ©lÃ¨bre Dieu, sert son prochain et proclame 
+                l'Ã‰vangile de JÃ©sus-Christ. Rejoignez-nous pour vivre une expÃ©rience spirituelle authentique.
             </p>
 
             <div class="hero-actions">
@@ -141,23 +1796,23 @@
     <!-- Que recherchez-vous ? -->
     <select class="search-input-large">
         <option value="">Que recherchez-vous ?</option>
-        <option value="evenements">Événements</option>
+        <option value="evenements">Ã‰vÃ©nements</option>
         <option value="articles">Articles</option>
         <option value="cultes">Heures des Cultes</option>
         <option value="autres">Autres</option>
     </select>
 
-    <!-- Où ? -->
+    <!-- OÃ¹ ? -->
     <select class="search-input-large">
-        <option value="">Où ?</option>
+        <option value="">OÃ¹ ?</option>
         <option value="ville1">Ville 1</option>
         <option value="ville2">Ville 2</option>
         <option value="ville3">Ville 3</option>
     </select>
 
-    <!-- Catégorie -->
+    <!-- CatÃ©gorie -->
     <select class="search-input-large">
-        <option value="">Catégorie</option>
+        <option value="">CatÃ©gorie</option>
         <option value="enfants">Enfants</option>
         <option value="adulte">Adulte</option>
         <option value="jeunesse">Jeunesse</option>
@@ -171,7 +1826,7 @@
             
 </section>
 
-  <!-- Nouveau Carousel Section - Vie de notre Église -->
+  <!-- Nouveau Carousel Section - Vie de notre Ã‰glise -->
 <section class="church-carousel-section">
     <!-- Floating Elements -->
     <div class="floating-element floating-1"></div>
@@ -180,7 +1835,7 @@
     <div class="container">
         <div class="section-header">
             <h2>Vie Communautaire</h2>
-            <p>Découvrez les activités et moments forts qui rythment la vie de notre église</p>
+            <p>DÃ©couvrez les activitÃ©s et moments forts qui rythment la vie de notre Ã©glise</p>
         </div>
         
         <div class="church-carousel swiper">
@@ -196,7 +1851,7 @@
                             <span class="category-badge">Culte</span>
                             <div class="carousel-caption">
                                 <h3>Culte du Dimanche</h3>
-                                <p>Chaque dimanche, nous nous rassemblons pour louer Dieu, méditer sa Parole et partager la communion fraternelle. Un moment privilégié de rencontre avec Dieu et les frères et sœurs.</p>
+                                <p>Chaque dimanche, nous nous rassemblons pour louer Dieu, mÃ©diter sa Parole et partager la communion fraternelle. Un moment privilÃ©giÃ© de rencontre avec Dieu et les frÃ¨res et sÅ“urs.</p>
                                 <div class="carousel-info">
                                     <div class="info-item">
                                         <i class="fas fa-clock"></i>
@@ -233,14 +1888,14 @@
                 <div class="swiper-slide">
                     <div class="carousel-item">
                         <div class="image-container">
-                            <img src="images/carousel/bapteme.jpg" alt="Baptême">
+                            <img src="images/carousel/bapteme.jpg" alt="BaptÃªme">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="content-container">
                             <span class="category-badge">Sacrement</span>
                             <div class="carousel-caption">
-                                <h3>Cérémonie de Baptême</h3>
-                                <p>Un moment solennel et joyeux où de nouveaux membres s'engagent publiquement dans la foi chrétienne. Nous célébrons ensemble cette étape importante de leur cheminement spirituel.</p>
+                                <h3>CÃ©rÃ©monie de BaptÃªme</h3>
+                                <p>Un moment solennel et joyeux oÃ¹ de nouveaux membres s'engagent publiquement dans la foi chrÃ©tienne. Nous cÃ©lÃ©brons ensemble cette Ã©tape importante de leur cheminement spirituel.</p>
                                 <div class="carousel-info">
                                     <div class="info-item">
                                         <i class="fas fa-calendar"></i>
@@ -248,7 +1903,7 @@
                                     </div>
                                     <div class="info-item">
                                         <i class="fas fa-user-plus"></i>
-                                        <span>15-20 baptisés</span>
+                                        <span>15-20 baptisÃ©s</span>
                                     </div>
                                 </div>
                                 <a href="#" class="read-more-btn">
@@ -262,11 +1917,11 @@
                             <div class="stats-grid">
                                 <div class="stat-item">
                                     <div class="stat-number">4</div>
-                                    <div class="stat-label">Cérémonies par an</div>
+                                    <div class="stat-label">CÃ©rÃ©monies par an</div>
                                 </div>
                                 <div class="stat-item">
                                     <div class="stat-number">60+</div>
-                                    <div class="stat-label">Personnes baptisées</div>
+                                    <div class="stat-label">Personnes baptisÃ©es</div>
                                 </div>
                             </div>
                         </div>
@@ -277,14 +1932,14 @@
                 <div class="swiper-slide">
                     <div class="carousel-item">
                         <div class="image-container">
-                            <img src="images/carousel/fraternelle.jpg" alt="Communauté">
+                            <img src="images/carousel/fraternelle.jpg" alt="CommunautÃ©">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="content-container">
-                            <span class="category-badge">Communauté</span>
+                            <span class="category-badge">CommunautÃ©</span>
                             <div class="carousel-caption">
                                 <h3>Vie Fraternelle</h3>
-                                <p>Nous croyons à l'importance des relations fraternelles. Partage de repas, activités sociales et groupes d'entraide renforcent les liens entre membres de notre communauté.</p>
+                                <p>Nous croyons Ã  l'importance des relations fraternelles. Partage de repas, activitÃ©s sociales et groupes d'entraide renforcent les liens entre membres de notre communautÃ©.</p>
                                 <div class="carousel-info">
                                     <div class="info-item">
                                         <i class="fas fa-home"></i>
@@ -310,7 +1965,7 @@
                                 </div>
                                 <div class="stat-item">
                                     <div class="stat-number">300+</div>
-                                    <div class="stat-label">Familles impliquées</div>
+                                    <div class="stat-label">Familles impliquÃ©es</div>
                                 </div>
                             </div>
                         </div>
@@ -328,11 +1983,11 @@
                             <span class="category-badge">Louange</span>
                             <div class="carousel-caption">
                                 <h3>Chorale Gospel</h3>
-                                <p>Notre chorale anime les cultes avec des chants de louange et d'adoration. Ouverte à tous, elle permet d'exprimer sa foi à travers la musique et de créer une atmosphère de joie.</p>
+                                <p>Notre chorale anime les cultes avec des chants de louange et d'adoration. Ouverte Ã  tous, elle permet d'exprimer sa foi Ã  travers la musique et de crÃ©er une atmosphÃ¨re de joie.</p>
                                 <div class="carousel-info">
                                     <div class="info-item">
                                         <i class="fas fa-music"></i>
-                                        <span>Répétition hebdo</span>
+                                        <span>RÃ©pÃ©tition hebdo</span>
                                     </div>
                                     <div class="info-item">
                                         <i class="fas fa-microphone"></i>
@@ -350,7 +2005,7 @@
                             <div class="stats-grid">
                                 <div class="stat-item">
                                     <div class="stat-number">50+</div>
-                                    <div class="stat-label">Chants au répertoire</div>
+                                    <div class="stat-label">Chants au rÃ©pertoire</div>
                                 </div>
                                 <div class="stat-item">
                                     <div class="stat-number">12</div>
@@ -365,14 +2020,14 @@
                 <div class="swiper-slide">
                     <div class="carousel-item">
                         <div class="image-container">
-                            <img src="images/carousel/etude-biblique.jpg" alt="Étude biblique">
+                            <img src="images/carousel/etude-biblique.jpg" alt="Ã‰tude biblique">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="content-container">
                             <span class="category-badge">Formation</span>
                             <div class="carousel-caption">
-                                <h3>Étude Biblique</h3>
-                                <p>Des sessions d'étude approfondie de la Bible pour grandir dans la connaissance de Dieu et son plan pour nos vies. Discussions interactives et application pratique.</p>
+                                <h3>Ã‰tude Biblique</h3>
+                                <p>Des sessions d'Ã©tude approfondie de la Bible pour grandir dans la connaissance de Dieu et son plan pour nos vies. Discussions interactives et application pratique.</p>
                                 <div class="carousel-info">
                                     <div class="info-item">
                                         <i class="fas fa-book"></i>
@@ -394,7 +2049,7 @@
                             <div class="stats-grid">
                                 <div class="stat-item">
                                     <div class="stat-number">150+</div>
-                                    <div class="stat-label">Participants réguliers</div>
+                                    <div class="stat-label">Participants rÃ©guliers</div>
                                 </div>
                                 <div class="stat-item">
                                     <div class="stat-number">40</div>
@@ -416,11 +2071,11 @@
                             <span class="category-badge">Service</span>
                             <div class="carousel-caption">
                                 <h3>Action Sociale</h3>
-                                <p>Notre église s'engage activement dans la communauté à travers des projets sociaux : distribution alimentaire, soutien scolaire, visites aux personnes isolées.</p>
+                                <p>Notre Ã©glise s'engage activement dans la communautÃ© Ã  travers des projets sociaux : distribution alimentaire, soutien scolaire, visites aux personnes isolÃ©es.</p>
                                 <div class="carousel-info">
                                     <div class="info-item">
                                         <i class="fas fa-hands-helping"></i>
-                                        <span>Bénévolat actif</span>
+                                        <span>BÃ©nÃ©volat actif</span>
                                     </div>
                                     <div class="info-item">
                                         <i class="fas fa-heart"></i>
@@ -442,7 +2097,7 @@
                                 </div>
                                 <div class="stat-item">
                                     <div class="stat-number">200+</div>
-                                    <div class="stat-label">Bénévoles engagés</div>
+                                    <div class="stat-label">BÃ©nÃ©voles engagÃ©s</div>
                                 </div>
                             </div>
                         </div>
@@ -461,7 +2116,7 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-number">1985</div>
-                    <div class="stat-label">Année de Fondation</div>
+                    <div class="stat-label">AnnÃ©e de Fondation</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">1,250+</div>
@@ -469,7 +2124,7 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">15+</div>
-                    <div class="stat-label">Ministères</div>
+                    <div class="stat-label">MinistÃ¨res</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">52</div>
@@ -481,24 +2136,24 @@
         <!-- Features / Valeurs -->
         <div class="section-title" style="margin-top: 60px;">
             <h2>Nos Valeurs Fondamentales</h2>
-            <p>Ce qui fait la particularité de notre communauté</p>
+            <p>Ce qui fait la particularitÃ© de notre communautÃ©</p>
         </div>
 
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-bible"></i></div>
                 <h3>Foi Biblique</h3>
-                <p>Nous croyons en l'autorité suprême de la Bible comme fondement de notre foi et pratique quotidienne.</p>
+                <p>Nous croyons en l'autoritÃ© suprÃªme de la Bible comme fondement de notre foi et pratique quotidienne.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-hands-praying"></i></div>
-                <h3>Prière Communautaire</h3>
-                <p>La prière collective est au cœur de notre église, nous unissant pour nos besoins et ceux du monde.</p>
+                <h3>PriÃ¨re Communautaire</h3>
+                <p>La priÃ¨re collective est au cÅ“ur de notre Ã©glise, nous unissant pour nos besoins et ceux du monde.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-people-carry"></i></div>
                 <h3>Service Fraternel</h3>
-                <p>Nous servons notre communauté avec amour pratique et soutien mutuel, incarnant les valeurs chrétiennes au quotidien.</p>
+                <p>Nous servons notre communautÃ© avec amour pratique et soutien mutuel, incarnant les valeurs chrÃ©tiennes au quotidien.</p>
             </div>
         </div>
     </div>
@@ -508,13 +2163,13 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="images/bg-hero-3.jpg" alt="Notre Église">
+                        <img src="images/bg-hero-3.jpg" alt="Notre Ã‰glise">
                     </div>
                     <div class="about-text">
-                        <div class="section-subtitle">À Propos de Nous</div>
-                        <h3>Une Communauté de Foi Depuis 1985</h3>
-                        <p>L'Église La Grâce de la Croix a été fondée en 1985 avec la vision de créer une communauté chrétienne vibrante qui honore Dieu et sert le peuple burundais.</p>
-                        <p>Nous croyons en la puissance transformatrice de l'Évangile de Jésus-Christ et nous nous engageons à vivre selon les enseignements bibliques dans notre vie quotidienne.</p>
+                        <div class="section-subtitle">Ã€ Propos de Nous</div>
+                        <h3>Une CommunautÃ© de Foi Depuis 1985</h3>
+                        <p>L'Ã‰glise La GrÃ¢ce de la Croix a Ã©tÃ© fondÃ©e en 1985 avec la vision de crÃ©er une communautÃ© chrÃ©tienne vibrante qui honore Dieu et sert le peuple burundais.</p>
+                        <p>Nous croyons en la puissance transformatrice de l'Ã‰vangile de JÃ©sus-Christ et nous nous engageons Ã  vivre selon les enseignements bibliques dans notre vie quotidienne.</p>
                         
                         <div class="about-features">
                             <div class="feature-item">
@@ -523,7 +2178,7 @@
                                 </div>
                                 <div>
                                     <h4>Foi Solide</h4>
-                                    <p>Basée sur les Écritures</p>
+                                    <p>BasÃ©e sur les Ã‰critures</p>
                                 </div>
                             </div>
                             <div class="feature-item">
@@ -532,7 +2187,7 @@
                                 </div>
                                 <div>
                                     <h4>Amour Fraternel</h4>
-                                    <p>Communauté accueillante</p>
+                                    <p>CommunautÃ© accueillante</p>
                                 </div>
                             </div>
                             <div class="feature-item">
@@ -550,7 +2205,7 @@
                                 </div>
                                 <div>
                                     <h4>Mission</h4>
-                                    <p>Témoignage au Burundi</p>
+                                    <p>TÃ©moignage au Burundi</p>
                                 </div>
                             </div>
                         </div>
@@ -563,7 +2218,7 @@
 <section class="section" style="background-color: var(--light);" id="cultes">
     <div class="container">
         <div class="section-title">
-            <h2>Événements & Activités</h2>
+            <h2>Ã‰vÃ©nements & ActivitÃ©s</h2>
             <p>Rejoignez-nous pour ces moments de communion et de vie communautaire</p>
         </div>
         
@@ -571,12 +2226,12 @@
             <!-- Mariage -->
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/evenements/mariage.jpg" alt="Mariage chrétien">
+                    <img src="images/evenements/mariage.jpg" alt="Mariage chrÃ©tien">
                     <div class="event-date">25 Janv</div>
                 </div>
                 <div class="event-content">
                     <h3 class="event-title">Mariage de Jean & Marie</h3>
-                    <p class="event-desc">Célébration de l'union sacrée de Jean et Marie. Une cérémonie remplie de louanges et de bénédictions pour le nouveau couple.</p>
+                    <p class="event-desc">CÃ©lÃ©bration de l'union sacrÃ©e de Jean et Marie. Une cÃ©rÃ©monie remplie de louanges et de bÃ©nÃ©dictions pour le nouveau couple.</p>
                     <div class="event-time">
                         <i class="fas fa-clock"></i>
                         14h00 - 17h00
@@ -586,20 +2241,20 @@
                         Chapelle principale
                     </div>
                     <a href="#" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">
-                        <i class="fas fa-heart"></i> Bénir le couple
+                        <i class="fas fa-heart"></i> BÃ©nir le couple
                     </a>
                 </div>
             </div>
             
-            <!-- Activités sportives -->
+            <!-- ActivitÃ©s sportives -->
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/evenements/tournoi.jpg" alt="Activités sportives">
+                    <img src="images/evenements/tournoi.jpg" alt="ActivitÃ©s sportives">
                     <div class="event-date">Samedi</div>
                 </div>
                 <div class="event-content">
                     <h3 class="event-title">Tournoi Sportif Fraternel</h3>
-                    <p class="event-desc">Compétition amicale de football et volleyball entre les groupes de jeunes. Esprit d'équipe et bonne humeur garantis !</p>
+                    <p class="event-desc">CompÃ©tition amicale de football et volleyball entre les groupes de jeunes. Esprit d'Ã©quipe et bonne humeur garantis !</p>
                     <div class="event-time">
                         <i class="fas fa-clock"></i>
                         9h00 - 13h00
@@ -614,15 +2269,15 @@
                 </div>
             </div>
             
-            <!-- Soirée spéciale -->
+            <!-- SoirÃ©e spÃ©ciale -->
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/evenements/soiree.jpg" alt="Soirée louange">
+                    <img src="images/evenements/soiree.jpg" alt="SoirÃ©e louange">
                     <div class="event-date">28 Janv</div>
                 </div>
                 <div class="event-content">
-                    <h3 class="event-title">Soirée de Louange et Témoignages</h3>
-                    <p class="event-desc">Une soirée spéciale de louange avec la chorale gospel et des témoignages puissants de transformation de vie.</p>
+                    <h3 class="event-title">SoirÃ©e de Louange et TÃ©moignages</h3>
+                    <p class="event-desc">Une soirÃ©e spÃ©ciale de louange avec la chorale gospel et des tÃ©moignages puissants de transformation de vie.</p>
                     <div class="event-time">
                         <i class="fas fa-clock"></i>
                         18h30 - 21h30
@@ -632,7 +2287,7 @@
                         Salle polyvalente
                     </div>
                     <a href="#" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">
-                        <i class="fas fa-music"></i> Réserver
+                        <i class="fas fa-music"></i> RÃ©server
                     </a>
                 </div>
             </div>
@@ -644,7 +2299,7 @@
                     <div class="event-date">30 Janv</div>
                 </div>
                 <div class="event-content">
-                    <h3 class="event-title">Atelier "Famille Chrétienne"</h3>
+                    <h3 class="event-title">Atelier "Famille ChrÃ©tienne"</h3>
                     <p class="event-desc">Formation pratique pour couples et parents sur la gestion du foyer selon les principes bibliques. Garderie disponible.</p>
                     <div class="event-time">
                         <i class="fas fa-clock"></i>
@@ -652,7 +2307,7 @@
                     </div>
                     <div class="event-time" style="margin-top: 8px;">
                         <i class="fas fa-map-marker-alt"></i>
-                        Salle de conférence
+                        Salle de confÃ©rence
                     </div>
                     <a href="#" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">
                         <i class="fas fa-users"></i> S'inscrire
@@ -664,7 +2319,7 @@
         <!-- Calendrier complet -->
         <div style="text-align: center; margin-top: 50px;">
             <a href="#" class="btn btn-outline" style="padding: 12px 40px;">
-                <i class="fas fa-calendar-alt"></i> Voir le calendrier complet des activités
+                <i class="fas fa-calendar-alt"></i> Voir le calendrier complet des activitÃ©s
             </a>
         </div>
     </div>
@@ -677,35 +2332,35 @@
         <div class="container">
             <div class="section-title">
                 <h2>Galerie Photos</h2>
-                <p>Moments précieux de notre vie d'église</p>
+                <p>Moments prÃ©cieux de notre vie d'Ã©glise</p>
             </div>
             
             <div class="gallery-grid animate-on-scroll">
-                <a href="images/carousel/culte.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Culte dominical à l'église Saint-Jacques">
+                <a href="images/carousel/culte.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Culte dominical Ã  l'Ã©glise Saint-Jacques">
                     <img src="images/carousel/culte.jpg" alt="Culte">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
-                        <p>Célébration dominicale</p>
+                        <p>CÃ©lÃ©bration dominicale</p>
                     </div>
                 </a>
                 
-                <a href="images/carousel/bapteme-2.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Cérémonie de baptême dans le lac Tanganyika">
-                    <img src="images/carousel/bapteme-2.jpg" alt="Baptême">
+                <a href="images/carousel/bapteme-2.jpg" class="gallery-item" data-fancybox="gallery" data-caption="CÃ©rÃ©monie de baptÃªme dans le lac Tanganyika">
+                    <img src="images/carousel/bapteme-2.jpg" alt="BaptÃªme">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
-                        <p>Cérémonie de baptême</p>
+                        <p>CÃ©rÃ©monie de baptÃªme</p>
                     </div>
                 </a>
                 
-                <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=1200&q=60" class="gallery-item" data-fancybox="gallery" data-caption="Dîner communautaire après le culte">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" alt="Communauté">
+                <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=1200&q=60" class="gallery-item" data-fancybox="gallery" data-caption="DÃ®ner communautaire aprÃ¨s le culte">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" alt="CommunautÃ©">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                         <p>Repas fraternel</p>
                     </div>
                 </a>
                 
-                <a href="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwbXVzaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1200&q=60" class="gallery-item" data-fancybox="gallery" data-caption="Chorale gospel lors du culte de Noël">
+                <a href="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwbXVzaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1200&q=60" class="gallery-item" data-fancybox="gallery" data-caption="Chorale gospel lors du culte de NoÃ«l">
                     <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwbXVzaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="Chorale">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
@@ -713,15 +2368,15 @@
                     </div>
                 </a>
                 
-                <a href="images/carousel/etude-biblique.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Étude biblique en petit groupe">
-                    <img src="images/carousel/etude-biblique.jpg" alt="Étude biblique">
+                <a href="images/carousel/etude-biblique.jpg" class="gallery-item" data-fancybox="gallery" data-caption="Ã‰tude biblique en petit groupe">
+                    <img src="images/carousel/etude-biblique.jpg" alt="Ã‰tude biblique">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
-                        <p>Étude biblique</p>
+                        <p>Ã‰tude biblique</p>
                     </div>
                 </a>
                 
-                <a href="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW5pdGFyaWFuJTIwYWlkfGVufDB8fDB8fHww&auto=format&fit=crop&w=1200&q=60" class="gallery-item" data-fancybox="gallery" data-caption="Action sociale dans la communauté">
+                <a href="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW5pdGFyaWFuJTIwYWlkfGVufDB8fDB8fHww&auto=format&fit=crop&w=1200&q=60" class="gallery-item" data-fancybox="gallery" data-caption="Action sociale dans la communautÃ©">
                     <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW5pdGFyaWFuJTIwYWlkfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" alt="Action sociale">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
@@ -735,8 +2390,8 @@
         <section class="section">
             <div class="container">
                 <div class="section-title">
-                <h2>Actualités</h2>
-                <p>Restez informé des dernières activités et annonces de notre communauté.</p>
+                <h2>ActualitÃ©s</h2>
+                <p>Restez informÃ© des derniÃ¨res activitÃ©s et annonces de notre communautÃ©.</p>
             </div>
 
                 <div class="news-grid">
@@ -750,22 +2405,22 @@
                                 <span><i class="far fa-user"></i> Pasteur Jean</span>
                             </div>
                             <h3 class="news-title"><a href="#">Grand Repas Fraternel du Dimanche</a></h3>
-                            <p class="news-excerpt">Plus de 500 membres se sont réunis pour un temps de partage et de communion après le culte...</p>
+                            <p class="news-excerpt">Plus de 500 membres se sont rÃ©unis pour un temps de partage et de communion aprÃ¨s le culte...</p>
                             <a href="#" class="service-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="images/carousel/bapteme-2.jpg" alt="Baptême">
+                            <img src="images/carousel/bapteme-2.jpg" alt="BaptÃªme">
                         </div>
                         <div class="news-content">
                             <div class="news-meta">
                                 <span><i class="far fa-calendar"></i> 18 Nov 2024</span>
                                 <span><i class="far fa-user"></i> Pasteur David</span>
                             </div>
-                            <h3 class="news-title"><a href="#">15 Nouvelles Personnes Baptisées</a></h3>
-                            <p class="news-excerpt">Cérémonie de baptême émouvante au lac Tanganyika. Témoignages puissants de transformation...</p>
+                            <h3 class="news-title"><a href="#">15 Nouvelles Personnes BaptisÃ©es</a></h3>
+                            <p class="news-excerpt">CÃ©rÃ©monie de baptÃªme Ã©mouvante au lac Tanganyika. TÃ©moignages puissants de transformation...</p>
                             <a href="#" class="service-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -780,7 +2435,7 @@
                                 <span><i class="far fa-user"></i> Chef de Chorale</span>
                             </div>
                             <h3 class="news-title"><a href="#">Nouvel Album de la Chorale Gospel</a></h3>
-                            <p class="news-excerpt">Notre chorale vient de sortir son nouvel album "Louanges du Cœur". Disponible en streaming...</p>
+                            <p class="news-excerpt">Notre chorale vient de sortir son nouvel album "Louanges du CÅ“ur". Disponible en streaming...</p>
                             <a href="#" class="service-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -794,8 +2449,8 @@
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Témoignages</h2>
-                <p>Ce que vivent les membres de notre communauté</p>
+                <h2>TÃ©moignages</h2>
+                <p>Ce que vivent les membres de notre communautÃ©</p>
             </div>
             
             <div class="testimonials-carousel" id="testimonialsCarousel">
@@ -804,7 +2459,7 @@
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">"L'Église la grace de la croix est devenue ma famille spirituelle. J'ai trouvé un endroit où je peux grandir dans la foi et servir avec joie. L'amour fraternel qui règne ici est palpable."</p>
+                        <p class="testimonial-text">"L'Ã‰glise la grace de la croix est devenue ma famille spirituelle. J'ai trouvÃ© un endroit oÃ¹ je peux grandir dans la foi et servir avec joie. L'amour fraternel qui rÃ¨gne ici est palpable."</p>
                         <div class="testimonial-author">
                             <img src="images/evenements/tournoi.jpg" alt="Jean N.">
                             <div>
@@ -820,7 +2475,7 @@
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">"Après des années éloignée de Dieu, j'ai été accueillie avec amour dans cette église. Les enseignements bibliques ont transformé ma vie et mes relations familiales."</p>
+                        <p class="testimonial-text">"AprÃ¨s des annÃ©es Ã©loignÃ©e de Dieu, j'ai Ã©tÃ© accueillie avec amour dans cette Ã©glise. Les enseignements bibliques ont transformÃ© ma vie et mes relations familiales."</p>
                         <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie K.">
                             <div>
@@ -836,12 +2491,12 @@
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">"L'école du dimanche est formidable ! Mes enfants adorent venir chaque semaine. Ils apprennent les valeurs chrétiennes de manière ludique et adaptée à leur âge."</p>
+                        <p class="testimonial-text">"L'Ã©cole du dimanche est formidable ! Mes enfants adorent venir chaque semaine. Ils apprennent les valeurs chrÃ©tiennes de maniÃ¨re ludique et adaptÃ©e Ã  leur Ã¢ge."</p>
                         <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Paul M.">
                             <div>
                                 <h4>Paul Manirakiza</h4>
-                                <span>Père de famille</span>
+                                <span>PÃ¨re de famille</span>
                             </div>
                         </div>
                     </div>
@@ -852,12 +2507,12 @@
                         <div class="quote-icon">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">"Le groupe de jeunes m'a aidé à traverser l'adolescence avec des valeurs solides. J'ai trouvé des amis qui partagent ma foi et m'encouragent à grandir spirituellement."</p>
+                        <p class="testimonial-text">"Le groupe de jeunes m'a aidÃ© Ã  traverser l'adolescence avec des valeurs solides. J'ai trouvÃ© des amis qui partagent ma foi et m'encouragent Ã  grandir spirituellement."</p>
                         <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Sarah D.">
                             <div>
                                 <h4>Sarah Dusabe</h4>
-                                <span>Étudiante</span>
+                                <span>Ã‰tudiante</span>
                             </div>
                         </div>
                     </div>
@@ -882,7 +2537,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Notre Adresse</h4>
-                            <p>Avenue de l'Unité, Quartier Ngagara<br>Bujumbura, Burundi</p>
+                            <p>Avenue de l'UnitÃ©, Quartier Ngagara<br>Bujumbura, Burundi</p>
                         </div>
                     </div>
                     
@@ -891,7 +2546,7 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Téléphone</h4>
+                            <h4>TÃ©lÃ©phone</h4>
                             <p>+257 66 52 13 15<br>+257 79 12 34 56</p>
                         </div>
                     </div>
@@ -945,8 +2600,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Église La Grâce de la Croix</h3>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Une communauté protestante vivante au Burundi, proclamant l'Évangile de Jésus-Christ et servant notre prochain depuis 1985.</p>
+                    <h3>Ã‰glise La GrÃ¢ce de la Croix</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Une communautÃ© protestante vivante au Burundi, proclamant l'Ã‰vangile de JÃ©sus-Christ et servant notre prochain depuis 1985.</p>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/?locale=fr_FR" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
@@ -961,21 +2616,21 @@
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="src/pages/histoire2.html">Notre Histoire</a></li>
                         <li><a href="src/pages/activites.html">Culte en Direct</a></li>
-                        <li><a href="src/pages/activites.html">Événements</a></li>
-                        <li><a href="src/pages/ministeres.html">Ministères</a></li>
+                        <li><a href="src/pages/activites.html">Ã‰vÃ©nements</a></li>
+                        <li><a href="src/pages/ministeres.html">MinistÃ¨res</a></li>
                         <li><a href="#galerie">Galerie</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Nos Ministères</h3>
+                    <h3>Nos MinistÃ¨res</h3>
                     <ul class="footer-links">
-                        <li><a href="#">École du Dimanche</a></li>
+                        <li><a href="#">Ã‰cole du Dimanche</a></li>
                         <li><a href="#">Jeunesse</a></li>
                         <li><a href="#">Chorale Gospel</a></li>
                         <li><a href="#">Diaconat</a></li>
-                        <li><a href="#">Prière</a></li>
-                        <li><a href="#">Évangélisation</a></li>
+                        <li><a href="#">PriÃ¨re</a></li>
+                        <li><a href="#">Ã‰vangÃ©lisation</a></li>
                     </ul>
                 </div>
                 
@@ -991,7 +2646,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>© 2025 Église La Grâce de la Croix - Bujumbura, Burundi. Tous droits réservés.</p>
+                <p>Â© 2025 Ã‰glise La GrÃ¢ce de la Croix - Bujumbura, Burundi. Tous droits rÃ©servÃ©s.</p>
             </div>
         </div>
     </footer>
@@ -1191,7 +2846,7 @@
                 // Effets
                 on: {
                     init: function() {
-                        console.log('Carousel Swiper initialisé');
+                        console.log('Carousel Swiper initialisÃ©');
                         // Ajouter animation aux slides
                         this.slides.forEach((slide, index) => {
                             slide.style.transitionDelay = `${index * 0.1}s`;
@@ -1210,7 +2865,7 @@
                 }
             });
             
-            // Gestionnaire d'événements pour les boutons "En savoir plus"
+            // Gestionnaire d'Ã©vÃ©nements pour les boutons "En savoir plus"
             document.querySelectorAll('.church-carousel .read-more-btn').forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1231,7 +2886,7 @@
             }
             
             window.addEventListener('scroll', checkScroll);
-            checkScroll(); // Vérifier au chargement
+            checkScroll(); // VÃ©rifier au chargement
             
             // Effet parallaxe sur les images
             document.querySelectorAll('.church-carousel .image-container img').forEach(img => {
@@ -1267,7 +2922,7 @@
             // Form submission
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Merci pour votre message! Nous vous contacterons bientôt.');
+                alert('Merci pour votre message! Nous vous contacterons bientÃ´t.');
                 this.reset();
             });
             
@@ -1307,9 +2962,9 @@
     </script>
     <!-- Preloader Script -->
 <script>
-    // Version courte pour intégration immédiate
+    // Version courte pour intÃ©gration immÃ©diate
     (function() {
-        // Créer le preloader immédiatement
+        // CrÃ©er le preloader immÃ©diatement
         const preloaderHTML = `
             <div id="page-preloader" style="
                 position: fixed;
@@ -1340,7 +2995,7 @@
                     font-size: 18px;
                     font-weight: 500;
                     margin-bottom: 10px;
-                ">Église La Grâce de la Croix</div>
+                ">Ã‰glise La GrÃ¢ce de la Croix</div>
                 <div style="
                     color: rgba(255, 255, 255, 0.8);
                     font-family: 'Inter', sans-serif;
@@ -1361,7 +3016,7 @@
         document.body.insertAdjacentHTML('afterbegin', preloaderHTML);
         document.body.classList.add('preloader-active');
         
-        // Masquer le preloader quand tout est chargé
+        // Masquer le preloader quand tout est chargÃ©
         function hidePreloader() {
             const preloader = document.getElementById('page-preloader');
             if (preloader) {
@@ -1375,7 +3030,7 @@
             }
         }
         
-        // Attendre que tout soit chargé
+        // Attendre que tout soit chargÃ©
         if (document.readyState === 'complete') {
             setTimeout(hidePreloader, 1000);
         } else {
@@ -1384,12 +3039,12 @@
             });
         }
         
-        // Masquer après un délai maximum (fallback)
+        // Masquer aprÃ¨s un dÃ©lai maximum (fallback)
         setTimeout(hidePreloader, 5000);
     })();
 </script>
 
-<!-- Modale pour les dons - À ajouter avant </body> -->
+<!-- Modale pour les dons - Ã€ ajouter avant </body> -->
 <div class="modal-overlay" id="donsModal">
     <div class="modal-container">
         <div class="modal-header">
@@ -1402,15 +3057,15 @@
         <div class="modal-body">
             <!-- Contenu des dons ici -->
             <div class="dons-content">
-                <!-- Section Héros -->
+                <!-- Section HÃ©ros -->
                 <section class="dons-hero-modal">
                     <div class="container">
-                        <h3>Soutenir l'Œuvre de Dieu</h3>
-                        <p class="dons-verse">« Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie. » (2 Corinthiens 9:7)</p>
+                        <h3>Soutenir l'Å’uvre de Dieu</h3>
+                        <p class="dons-verse">Â« Que chacun donne comme il l'a rÃ©solu en son cÅ“ur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie. Â» (2 Corinthiens 9:7)</p>
                     </div>
                 </section>
                 
-                <!-- Section Méthodes de Don -->
+                <!-- Section MÃ©thodes de Don -->
                 <div class="dons-methods-grid">
                     <!-- Carte 1: Don en ligne -->
                     <div class="method-card-modal">
@@ -1418,10 +3073,10 @@
                             <i class="fas fa-credit-card"></i>
                         </div>
                         <h4>Don en Ligne</h4>
-                        <p>Don sécurisé par mobile money ou carte bancaire</p>
+                        <p>Don sÃ©curisÃ© par mobile money ou carte bancaire</p>
                         <div class="method-info">
-                            <p><i class="fas fa-check-circle"></i> Transaction 100% sécurisée</p>
-                            <p><i class="fas fa-check-circle"></i> Reçu immédiat</p>
+                            <p><i class="fas fa-check-circle"></i> Transaction 100% sÃ©curisÃ©e</p>
+                            <p><i class="fas fa-check-circle"></i> ReÃ§u immÃ©diat</p>
                             <p><i class="fas fa-check-circle"></i> Disponible 24h/24</p>
                         </div>
                         <button class="btn-don-modal btn-don-online">
@@ -1442,16 +3097,16 @@
                                 <strong>BANCOBU</strong>
                             </div>
                             <div class="bank-detail">
-                                <span>N° Compte :</span>
+                                <span>NÂ° Compte :</span>
                                 <strong>001-2345678-89</strong>
                             </div>
                             <div class="bank-detail">
                                 <span>Titulaire :</span>
-                                <strong>Église La Grâce de la Croix</strong>
+                                <strong>Ã‰glise La GrÃ¢ce de la Croix</strong>
                             </div>
                         </div>
                         <button class="btn-don-modal btn-copy" data-text="001-2345678-89">
-                            <i class="far fa-copy"></i> Copier le N° de Compte
+                            <i class="far fa-copy"></i> Copier le NÂ° de Compte
                         </button>
                     </div>
                     
@@ -1500,7 +3155,7 @@
                         <div class="person-info">
                             <p><i class="fas fa-clock"></i> <strong>Horaires des Cultes :</strong></p>
                             <p>Dimanche : 9h30 & 11h30</p>
-                            <p>Mardi : 19h (Prière)</p>
+                            <p>Mardi : 19h (PriÃ¨re)</p>
                         </div>
                         <button class="btn-don-modal btn-location">
                             <i class="fas fa-map-marker-alt"></i> Voir la Localisation
@@ -1508,9 +3163,9 @@
                     </div>
                 </div>
                 
-                <!-- Section Montants suggérés -->
+                <!-- Section Montants suggÃ©rÃ©s -->
                 <div class="dons-amounts">
-                    <h4><i class="fas fa-coins"></i> Montants suggérés</h4>
+                    <h4><i class="fas fa-coins"></i> Montants suggÃ©rÃ©s</h4>
                     <div class="amount-options">
                         <button class="amount-option" data-amount="5000">5 000 FBu</button>
                         <button class="amount-option" data-amount="10000">10 000 FBu</button>
@@ -1528,28 +3183,28 @@
                     <h4><i class="fas fa-chart-pie"></i> Utilisation des Dons</h4>
                     <div class="allocation-chart">
                         <div class="allocation-item">
-                            <span class="allocation-label">Missions & Évangélisation</span>
+                            <span class="allocation-label">Missions & Ã‰vangÃ©lisation</span>
                             <div class="allocation-bar">
                                 <div class="bar-fill" style="width: 30%; background: #3498db;"></div>
                             </div>
                             <span class="allocation-percent">30%</span>
                         </div>
                         <div class="allocation-item">
-                            <span class="allocation-label">Entretien de l'Église</span>
+                            <span class="allocation-label">Entretien de l'Ã‰glise</span>
                             <div class="allocation-bar">
                                 <div class="bar-fill" style="width: 25%; background: #2ecc71;"></div>
                             </div>
                             <span class="allocation-percent">25%</span>
                         </div>
                         <div class="allocation-item">
-                            <span class="allocation-label">Aide aux nécessiteux</span>
+                            <span class="allocation-label">Aide aux nÃ©cessiteux</span>
                             <div class="allocation-bar">
                                 <div class="bar-fill" style="width: 25%; background: #e74c3c;"></div>
                             </div>
                             <span class="allocation-percent">25%</span>
                         </div>
                         <div class="allocation-item">
-                            <span class="allocation-label">Activités jeunesse</span>
+                            <span class="allocation-label">ActivitÃ©s jeunesse</span>
                             <div class="allocation-bar">
                                 <div class="bar-fill" style="width: 20%; background: #f39c12;"></div>
                             </div>
@@ -1558,11 +3213,11 @@
                     </div>
                 </div>
                 
-                <!-- Section Témoignage -->
+                <!-- Section TÃ©moignage -->
                 <div class="dons-testimony">
                     <div class="testimony-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>"Donner à l'œuvre de Dieu a été une bénédiction pour ma famille. Nous voyons comment nos dons transforment des vies dans notre communauté."</p>
+                        <p>"Donner Ã  l'Å“uvre de Dieu a Ã©tÃ© une bÃ©nÃ©diction pour ma famille. Nous voyons comment nos dons transforment des vies dans notre communautÃ©."</p>
                         <div class="testimony-author">
                             <strong>Marie K.</strong>
                             <span>Membre depuis 8 ans</span>
@@ -1574,13 +3229,15 @@
         
         <div class="modal-footer">
             <p class="security-note">
-                <i class="fas fa-lock"></i> Toutes les transactions sont sécurisées et confidentielles
+                <i class="fas fa-lock"></i> Toutes les transactions sont sÃ©curisÃ©es et confidentielles
             </p>
         </div>
     </div>
 </div>
 </body>
 </html>
+
+
 
 
 
