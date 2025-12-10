@@ -1,3 +1,79 @@
+/* ============================================
+   VARIABLES CSS - DOIT ÊTRE EN PREMIER
+   ============================================ */
+:root {
+    --primary: #0071c2;
+    --primary-light: #3399ff;
+    --primary-dark: #00224F;
+    --secondary: #8B4513;
+    --secondary-light: #A0522D;
+    --dark: #333333;
+    --gray-light: #f8f9fa;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ============================================
+   RESET ET STYLES DE BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    overflow-x: hidden;
+    padding-top: 86px; /* Pour le header fixe */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+/* ============================================
+   HEADER STYLES (votre contenu)
+   ============================================ */
 /* header-footer.css - Styles communs pour header et footer */
 
 /* Header Styles */
@@ -342,6 +418,9 @@ nav {
     }
 }
 
+/* ============================================
+   FOOTER STYLES (votre contenu)
+   ============================================ */
 /* Footer */
 footer {
     background: var(--primary-dark);
@@ -812,18 +891,4 @@ body.preloader-active {
 .loaded #preloader {
     opacity: 0;
     visibility: hidden;
-}
-
-/* Variables CSS (ajoutées pour que tout fonctionne) */
-:root {
-    --primary: #0071c2;
-    --primary-light: #3399ff;
-    --primary-dark: #00224F;
-    --secondary: #8B4513;
-    --secondary-light: #A0522D;
-    --dark: #333333;
-    --gray-light: #f8f9fa;
-    --border-radius: 10px;
-    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
 }
