@@ -1,4 +1,47 @@
 ﻿/* ============================================
+   VARIABLES CSS - DOIT ÊTRE EN PREMIER !
+   ============================================ */
+:root {
+    --primary: #0071c2;
+    --primary-light: #3399ff;
+    --primary-dark: #00224F;
+    --secondary: #8B4513;
+    --secondary-light: #A0522D;
+    --dark: #333333;
+    --gray-light: #f8f9fa;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ============================================
+   RESET DE BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    overflow-x: hidden;
+    padding-top: 86px; /* Pour header fixe */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* ============================================
    VARIABLES CSS - DOIT ÊTRE EN PREMIER
    ============================================ */
 :root {
@@ -502,3 +545,4 @@ body.preloader-active {
         height: 80px;
     }
 }
+
